@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db329b03053aad5775d933bbe5a297e1fb75fd40
             this.button1 = new System.Windows.Forms.Button();
 <<<<<<< HEAD
             this.label1 = new System.Windows.Forms.Label();
@@ -70,6 +74,13 @@
             this.SuspendLayout();
             // 
 >>>>>>> parent of ffdb357... proba
+<<<<<<< HEAD
+=======
+=======
+            this.SuspendLayout();
+            // 
+>>>>>>> parent of ffdb357... proba
+>>>>>>> db329b03053aad5775d933bbe5a297e1fb75fd40
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -78,6 +89,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db329b03053aad5775d933bbe5a297e1fb75fd40
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -97,6 +112,14 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 >>>>>>> parent of ffdb357... proba
+<<<<<<< HEAD
+=======
+=======
+            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+>>>>>>> parent of ffdb357... proba
+>>>>>>> db329b03053aad5775d933bbe5a297e1fb75fd40
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -108,6 +131,10 @@
 
         #endregion
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db329b03053aad5775d933bbe5a297e1fb75fd40
 
         private System.Windows.Forms.Button button1;
 <<<<<<< HEAD
@@ -116,6 +143,12 @@
         private System.Windows.Forms.Button button2;
 >>>>>>> 200c31af270eff6a01eacc858f2509f8782e0759
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of ffdb357... proba
+=======
+>>>>>>> db329b03053aad5775d933bbe5a297e1fb75fd40
 >>>>>>> parent of ffdb357... proba
     }
 }
