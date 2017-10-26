@@ -1,0 +1,21 @@
+c:\users\bezpa\onedrive\documents\visual studio 2015\Projects\RULETKA1\RULETKA1\bin\Debug\RULETKA1.exe.config
+c:\users\bezpa\onedrive\documents\visual studio 2015\Projects\RULETKA1\RULETKA1\bin\Debug\RULETKA1.exe
+c:\users\bezpa\onedrive\documents\visual studio 2015\Projects\RULETKA1\RULETKA1\bin\Debug\RULETKA1.pdb
+c:\users\bezpa\onedrive\documents\visual studio 2015\Projects\RULETKA1\RULETKA1\obj\Debug\RULETKA1.csprojResolveAssemblyReference.cache
+c:\users\bezpa\onedrive\documents\visual studio 2015\Projects\RULETKA1\RULETKA1\obj\Debug\RULETKA1.Form1.resources
+c:\users\bezpa\onedrive\documents\visual studio 2015\Projects\RULETKA1\RULETKA1\obj\Debug\RULETKA1.Properties.Resources.resources
+c:\users\bezpa\onedrive\documents\visual studio 2015\Projects\RULETKA1\RULETKA1\obj\Debug\RULETKA1.csproj.GenerateResource.Cache
+c:\users\bezpa\onedrive\documents\visual studio 2015\Projects\RULETKA1\RULETKA1\obj\Debug\RULETKA1.exe
+c:\users\bezpa\onedrive\documents\visual studio 2015\Projects\RULETKA1\RULETKA1\obj\Debug\RULETKA1.pdb
+C:\Users\bezpa\OneDrive\Documents\GitHub\dsfsfdfds\RULETKA1\RULETKA1\bin\Debug\RULETKA1.exe.config
+C:\Users\bezpa\OneDrive\Documents\GitHub\dsfsfdfds\RULETKA1\RULETKA1\obj\Debug\RULETKA1.exe
+C:\Users\bezpa\OneDrive\Documents\GitHub\dsfsfdfds\RULETKA1\RULETKA1\obj\Debug\RULETKA1.pdb
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA1\RULETKA1\bin\Debug\RULETKA1.exe.config
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA1\RULETKA1\obj\Debug\RULETKA1.exe
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA1\RULETKA1\obj\Debug\RULETKA1.pdb
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA1\RULETKA1\bin\Debug\RULETKA1.exe
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA1\RULETKA1\bin\Debug\RULETKA1.pdb
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA1\RULETKA1\obj\Debug\RULETKA1.csprojResolveAssemblyReference.cache
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA1\RULETKA1\obj\Debug\RULETKA1.Form1.resources
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA1\RULETKA1\obj\Debug\RULETKA1.Properties.Resources.resources
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA1\RULETKA1\obj\Debug\RULETKA1.csproj.GenerateResource.Cache
