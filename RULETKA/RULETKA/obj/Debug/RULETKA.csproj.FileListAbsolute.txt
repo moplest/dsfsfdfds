@@ -1,2 +1,11 @@
 D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA\RULETKA\bin\Debug\RULETKA.exe.config
 C:\Users\bezpa\OneDrive\Documents\GitHub\dsfsfdfds\RULETKA\RULETKA\bin\Debug\RULETKA.exe.config
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA\RULETKA\bin\Debug\RULETKA.exe
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA\RULETKA\bin\Debug\RULETKA.pdb
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.csprojResolveAssemblyReference.cache
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.Properties.Resources.resources
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.csproj.GenerateResource.Cache
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.exe
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.pdb
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.Ruletka.resources
+D:\Documents\KN - Unibit\3. Semester\VSP\Ruletka\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.Login.resources

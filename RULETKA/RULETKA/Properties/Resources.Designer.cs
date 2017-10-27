@@ -63,6 +63,16 @@ namespace RULETKA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap green_casino_background_23_2147634151 {
+            get {
+                object obj = ResourceManager.GetObject("green-casino-background_23-2147634151", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RULETKATA {
             get {
                 object obj = ResourceManager.GetObject("RULETKATA", resourceCulture);
