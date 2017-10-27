@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RULETKA2
+namespace RULETKA
 {
     static class Program
     {

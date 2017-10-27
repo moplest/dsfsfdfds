@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RULETKA2.Properties
+namespace RULETKA.Properties
 {
 
 
