@@ -45,6 +45,17 @@ namespace RULETKA
             Login.LoginInstance.Show();
 
         }
+
+        private void n1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void putNewChip(Label lbl)
+        {
+            emptyChipPicture.Location = (lbl.Location.X + (lbl.Width /2) - (emptyChipPicture.Width /2)), 2;
+
+        }
         //Метод който изключва бутона "Х" на WinForm-ата
         //private const int CP_NOCLOSE_BUTTON = 0x200;  
         //protected override CreateParams CreateParams
