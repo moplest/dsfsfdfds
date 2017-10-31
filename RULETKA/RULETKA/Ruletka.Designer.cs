@@ -30,8 +30,7 @@
         {
             this.btnExit = new System.Windows.Forms.Label();
             this.n1 = new System.Windows.Forms.Label();
-            this.emptyChipPicture = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.emptyChipPicture)).BeginInit();
+            this.emptyChipPicture = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
@@ -50,18 +49,17 @@
             this.n1.Name = "n1";
             this.n1.Size = new System.Drawing.Size(74, 67);
             this.n1.TabIndex = 1;
+            this.n1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.n1.Click += new System.EventHandler(this.n1_Click);
             // 
             // emptyChipPicture
             // 
             this.emptyChipPicture.BackColor = System.Drawing.Color.Transparent;
-            this.emptyChipPicture.BackgroundImage = global::RULETKA.Properties.Resources.goodChip;
-            this.emptyChipPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.emptyChipPicture.Location = new System.Drawing.Point(148, 459);
+            this.emptyChipPicture.Image = global::RULETKA.Properties.Resources.goodChip2;
+            this.emptyChipPicture.Location = new System.Drawing.Point(251, 540);
             this.emptyChipPicture.Name = "emptyChipPicture";
-            this.emptyChipPicture.Size = new System.Drawing.Size(44, 44);
+            this.emptyChipPicture.Size = new System.Drawing.Size(109, 76);
             this.emptyChipPicture.TabIndex = 2;
-            this.emptyChipPicture.TabStop = false;
             // 
             // Ruletka
             // 
@@ -80,7 +78,6 @@
             this.Name = "Ruletka";
             this.Text = "Casino Roulette";
             this.Load += new System.EventHandler(this.Ruletka_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.emptyChipPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -89,7 +86,7 @@
 
         private System.Windows.Forms.Label btnExit;
         private System.Windows.Forms.Label n1;
-        private System.Windows.Forms.PictureBox emptyChipPicture;
+        private System.Windows.Forms.Label emptyChipPicture;
     }
 }
 

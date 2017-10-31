@@ -48,13 +48,14 @@ namespace RULETKA
 
         private void n1_Click(object sender, EventArgs e)
         {
-            
+            putNewChip(n1, 1);
         }
 
-        private void putNewChip(Label lbl)
+        private void putNewChip(Label lbl, int chipNumber)
         {
-            emptyChipPicture.Location = (lbl.Location.X + (lbl.Width /2) - (emptyChipPicture.Width /2)), 2;
-
+            emptyChipPicture.Location = new System.Drawing.Point(
+                (lbl.Location.X + (lbl.Width / 2) - (emptyChipPicture.Width / 2)), 
+                (lbl.Location.Y + (lbl.Height / 2) - (emptyChipPicture.Width/2)));
         }
         //Метод който изключва бутона "Х" на WinForm-ата
         //private const int CP_NOCLOSE_BUTTON = 0x200;  
