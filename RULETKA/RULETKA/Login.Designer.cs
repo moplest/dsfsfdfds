@@ -34,13 +34,14 @@
             this.tbUser = new System.Windows.Forms.TextBox();
             this.tbInputMoney = new System.Windows.Forms.TextBox();
             this.lblInputMoney = new System.Windows.Forms.Label();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(169, 449);
+            this.LoginButton.Location = new System.Drawing.Point(86, 445);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(77, 30);
+            this.LoginButton.Size = new System.Drawing.Size(129, 30);
             this.LoginButton.TabIndex = 0;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
@@ -81,7 +82,7 @@
             this.tbInputMoney.Name = "tbInputMoney";
             this.tbInputMoney.Size = new System.Drawing.Size(163, 20);
             this.tbInputMoney.TabIndex = 4;
-            this.tbInputMoney.Text = "0.00";
+            this.tbInputMoney.Text = "100.00";
             // 
             // lblInputMoney
             // 
@@ -92,6 +93,16 @@
             this.lblInputMoney.TabIndex = 5;
             this.lblInputMoney.Text = "Cash4Play: ";
             // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(242, 445);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(96, 30);
+            this.ExitButton.TabIndex = 6;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -99,6 +110,7 @@
             this.BackgroundImage = global::RULETKA.Properties.Resources.green_casino_background_23_2147634151;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(424, 513);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.lblInputMoney);
             this.Controls.Add(this.tbInputMoney);
             this.Controls.Add(this.tbUser);
@@ -123,5 +135,6 @@
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.TextBox tbInputMoney;
         private System.Windows.Forms.Label lblInputMoney;
+        private System.Windows.Forms.Button ExitButton;
     }
 }

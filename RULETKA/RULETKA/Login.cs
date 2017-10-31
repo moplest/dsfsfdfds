@@ -50,5 +50,10 @@ namespace RULETKA
                 lblError.Text = "Invalid username! Please try again.";
             }
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
