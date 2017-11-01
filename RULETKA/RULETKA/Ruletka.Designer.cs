@@ -31,6 +31,8 @@
             this.btnExit = new System.Windows.Forms.Label();
             this.n1 = new System.Windows.Forms.Label();
             this.emptyChipPicture = new System.Windows.Forms.Label();
+            this.n2 = new System.Windows.Forms.Label();
+            this.n0 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
@@ -56,10 +58,28 @@
             // 
             this.emptyChipPicture.BackColor = System.Drawing.Color.Transparent;
             this.emptyChipPicture.Image = global::RULETKA.Properties.Resources.goodChip2;
-            this.emptyChipPicture.Location = new System.Drawing.Point(251, 540);
+            this.emptyChipPicture.Location = new System.Drawing.Point(99, 520);
             this.emptyChipPicture.Name = "emptyChipPicture";
             this.emptyChipPicture.Size = new System.Drawing.Size(109, 76);
             this.emptyChipPicture.TabIndex = 2;
+            // 
+            // n2
+            // 
+            this.n2.BackColor = System.Drawing.Color.Transparent;
+            this.n2.Location = new System.Drawing.Point(268, 471);
+            this.n2.Name = "n2";
+            this.n2.Size = new System.Drawing.Size(74, 67);
+            this.n2.TabIndex = 3;
+            this.n2.Click += new System.EventHandler(this.n2_Click);
+            // 
+            // n0
+            // 
+            this.n0.BackColor = System.Drawing.Color.Transparent;
+            this.n0.Location = new System.Drawing.Point(194, 403);
+            this.n0.Name = "n0";
+            this.n0.Size = new System.Drawing.Size(77, 203);
+            this.n0.TabIndex = 4;
+            this.n0.Click += new System.EventHandler(this.n0_Click);
             // 
             // Ruletka
             // 
@@ -68,6 +88,8 @@
             this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.n0);
+            this.Controls.Add(this.n2);
             this.Controls.Add(this.emptyChipPicture);
             this.Controls.Add(this.n1);
             this.Controls.Add(this.btnExit);
@@ -87,6 +109,8 @@
         private System.Windows.Forms.Label btnExit;
         private System.Windows.Forms.Label n1;
         private System.Windows.Forms.Label emptyChipPicture;
+        private System.Windows.Forms.Label n2;
+        private System.Windows.Forms.Label n0;
     }
 }
 

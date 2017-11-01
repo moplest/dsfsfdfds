@@ -45,17 +45,48 @@ namespace RULETKA
             Login.LoginInstance.Show();
 
         }
-
-        private void n1_Click(object sender, EventArgs e)
+        public Label GetChipClone(Label lbl)
         {
-            putNewChip(n1, 1);
+            Label pb = new Label();
+            // emptyChipPicture
+            pb.BackColor = System.Drawing.Color.Transparent;
+            pb.BackgroundImage = global::RULETKA.Properties.Resources.goodChip;
+            pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            pb.Location = lbl.Location;
+            pb.Name = "emptyChipPicture2";
+            pb.Size = new System.Drawing.Size(44, 44);
+            pb.TabIndex = 2;
+            pb.TabStop = false;
+            return pb;
         }
-
         private void putNewChip(Label lbl, int chipNumber)
         {
             emptyChipPicture.Location = new System.Drawing.Point(
-                (lbl.Location.X + (lbl.Width / 2) - (emptyChipPicture.Width / 2)), 
-                (lbl.Location.Y + (lbl.Height / 2) - (emptyChipPicture.Width/2)));
+                (lbl.Location.X + (lbl.Width / 2) - (emptyChipPicture.Width / 2)),
+                (lbl.Location.Y + (lbl.Height / 2) - (emptyChipPicture.Width / 2)));
+        }
+
+        private void n1_Click(object sender, EventArgs e)
+        {
+             putNewChip(n1, 1);
+            Label newPB = GetChipClone(n1);
+            this.Controls.Add(newPB);
+            newPB.BringToFront();
+        }
+        private void n2_Click(object sender, EventArgs e)
+        {
+            putNewChip(n2, 1);
+            Label newPB = GetChipClone(n2);
+            this.Controls.Add(newPB);
+            newPB.BringToFront();
+        }
+
+        private void n0_Click(object sender, EventArgs e)
+        {
+            putNewChip(n0, 1);
+            Label newPB = GetChipClone(n0);
+            this.Controls.Add(newPB);
+            newPB.BringToFront();
         }
         //Метод който изключва бутона "Х" на WinForm-ата
         //private const int CP_NOCLOSE_BUTTON = 0x200;  
