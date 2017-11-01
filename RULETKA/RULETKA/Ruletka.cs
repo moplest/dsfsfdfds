@@ -52,52 +52,97 @@ namespace RULETKA
             pb.BackColor = System.Drawing.Color.Transparent;
             pb.BackgroundImage = global::RULETKA.Properties.Resources.goodChip;
             pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            pb.Location = lbl.Location;
-            pb.Name = "emptyChipPicture2";
             pb.Size = new System.Drawing.Size(44, 44);
+            pb.Location = putNewChipLocation(pb, lbl);
+            pb.Name = "emptyChipPicture2";
+            pb.TextAlign = ContentAlignment.MiddleCenter;
+            pb.Text = "1";
             pb.TabIndex = 2;
             pb.TabStop = false;
+            this.Controls.Add(pb);
+            pb.BringToFront();
             return pb;
         }
-        private void putNewChip(Label lbl, int chipNumber)
+        private Point putNewChipLocation(Label chip, Label lbl)
         {
-            emptyChipPicture.Location = new System.Drawing.Point(
-                (lbl.Location.X + (lbl.Width / 2) - (emptyChipPicture.Width / 2)),
-                (lbl.Location.Y + (lbl.Height / 2) - (emptyChipPicture.Width / 2)));
+            Point pnt = new System.Drawing.Point(
+                (lbl.Location.X + (lbl.Width / 2) - (chip.Width / 2)),
+                (lbl.Location.Y + (lbl.Height / 2) - (chip.Width / 2)));
+            return pnt;
+        }
+        private void n0_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n0);
         }
 
         private void n1_Click(object sender, EventArgs e)
         {
-             putNewChip(n1, 1);
             Label newPB = GetChipClone(n1);
-            this.Controls.Add(newPB);
-            newPB.BringToFront();
-        }
-        private void n2_Click(object sender, EventArgs e)
-        {
-            putNewChip(n2, 1);
-            Label newPB = GetChipClone(n2);
-            this.Controls.Add(newPB);
-            newPB.BringToFront();
         }
 
-        private void n0_Click(object sender, EventArgs e)
+        private void n2_Click(object sender, EventArgs e)
         {
-            putNewChip(n0, 1);
-            Label newPB = GetChipClone(n0);
-            this.Controls.Add(newPB);
-            newPB.BringToFront();
+            Label newPB = GetChipClone(n2);
         }
-        //Метод който изключва бутона "Х" на WinForm-ата
-        //private const int CP_NOCLOSE_BUTTON = 0x200;  
-        //protected override CreateParams CreateParams
-        //{
-        //    get
-        //    {
-        //        CreateParams myCp = base.CreateParams;
-        //        myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
-        //        return myCp;
-        //    }
-        //}
+
+        private void n3_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n3);
+        }
+
+        private void n4_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n4);
+        }
+
+        private void n5_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n5);
+        }
+
+        private void n6_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n6);
+        }
+
+        private void n7_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n7);
+        }
+
+        private void n8_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n8);
+        }
+
+        private void n9_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n9);
+        }
+
+        private void n10_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n10);
+        }
+
+        private void n11_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n11);
+        }
+
+        private void n12_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n12);
+        }
+
+        private void n13_Click(object sender, EventArgs e)
+        {
+            Label newPB = GetChipClone(n13);
+        }
+
+        private void r1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
