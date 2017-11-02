@@ -110,7 +110,7 @@
             // 
             this.emptyChipPicture.BackColor = System.Drawing.Color.Transparent;
             this.emptyChipPicture.Image = global::RULETKA.Properties.Resources.goodChip2;
-            this.emptyChipPicture.Location = new System.Drawing.Point(498, 237);
+            this.emptyChipPicture.Location = new System.Drawing.Point(313, 260);
             this.emptyChipPicture.Name = "emptyChipPicture";
             this.emptyChipPicture.Size = new System.Drawing.Size(109, 76);
             this.emptyChipPicture.TabIndex = 2;
