@@ -576,6 +576,7 @@
             this.ch2.Size = new System.Drawing.Size(61, 62);
             this.ch2.TabIndex = 52;
             this.ch2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ch2.Click += new System.EventHandler(this.ch2_Click);
             // 
             // ch3
             // 
