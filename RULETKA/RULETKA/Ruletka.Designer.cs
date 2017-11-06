@@ -85,7 +85,7 @@
             this.ch4 = new System.Windows.Forms.Label();
             this.ch5 = new System.Windows.Forms.Label();
             this.ch6 = new System.Windows.Forms.Label();
-            this.ChosenOne = new System.Windows.Forms.Label();
+            this.lblChosenOne = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
@@ -564,7 +564,7 @@
             // ch1
             // 
             this.ch1.BackColor = System.Drawing.Color.Transparent;
-            this.ch1.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ch1.Image = global::RULETKA.Properties.Resources.lastchip;
             this.ch1.Location = new System.Drawing.Point(12, 212);
             this.ch1.Name = "ch1";
@@ -577,7 +577,7 @@
             // ch2
             // 
             this.ch2.BackColor = System.Drawing.Color.Transparent;
-            this.ch2.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ch2.Image = global::RULETKA.Properties.Resources.lastchip;
             this.ch2.Location = new System.Drawing.Point(76, 212);
             this.ch2.Name = "ch2";
@@ -590,7 +590,7 @@
             // ch3
             // 
             this.ch3.BackColor = System.Drawing.Color.Transparent;
-            this.ch3.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ch3.Image = global::RULETKA.Properties.Resources.lastchip;
             this.ch3.Location = new System.Drawing.Point(140, 212);
             this.ch3.Name = "ch3";
@@ -603,7 +603,7 @@
             // ch4
             // 
             this.ch4.BackColor = System.Drawing.Color.Transparent;
-            this.ch4.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ch4.Image = global::RULETKA.Properties.Resources.lastchip;
             this.ch4.Location = new System.Drawing.Point(208, 212);
             this.ch4.Name = "ch4";
@@ -616,7 +616,7 @@
             // ch5
             // 
             this.ch5.BackColor = System.Drawing.Color.Transparent;
-            this.ch5.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ch5.Image = global::RULETKA.Properties.Resources.lastchip;
             this.ch5.Location = new System.Drawing.Point(271, 212);
             this.ch5.Name = "ch5";
@@ -629,7 +629,7 @@
             // ch6
             // 
             this.ch6.BackColor = System.Drawing.Color.Transparent;
-            this.ch6.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ch6.Image = global::RULETKA.Properties.Resources.lastchip;
             this.ch6.Location = new System.Drawing.Point(335, 212);
             this.ch6.Name = "ch6";
@@ -639,17 +639,17 @@
             this.ch6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ch6.Click += new System.EventHandler(this.ch6_Click);
             // 
-            // ChosenOne
+            // lblChosenOne
             // 
-            this.ChosenOne.BackColor = System.Drawing.Color.Transparent;
-            this.ChosenOne.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChosenOne.Image = global::RULETKA.Properties.Resources.theChosenOne;
-            this.ChosenOne.Location = new System.Drawing.Point(12, 212);
-            this.ChosenOne.Name = "ChosenOne";
-            this.ChosenOne.Size = new System.Drawing.Size(61, 61);
-            this.ChosenOne.TabIndex = 57;
-            this.ChosenOne.Text = "1";
-            this.ChosenOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblChosenOne.BackColor = System.Drawing.Color.Transparent;
+            this.lblChosenOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChosenOne.Image = global::RULETKA.Properties.Resources.theChosenOne;
+            this.lblChosenOne.Location = new System.Drawing.Point(12, 212);
+            this.lblChosenOne.Name = "lblChosenOne";
+            this.lblChosenOne.Size = new System.Drawing.Size(61, 61);
+            this.lblChosenOne.TabIndex = 57;
+            this.lblChosenOne.Text = "1";
+            this.lblChosenOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Ruletka
             // 
@@ -658,7 +658,7 @@
             this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.ChosenOne);
+            this.Controls.Add(this.lblChosenOne);
             this.Controls.Add(this.ch6);
             this.Controls.Add(this.ch5);
             this.Controls.Add(this.ch4);
@@ -786,7 +786,7 @@
         private System.Windows.Forms.Label ch4;
         private System.Windows.Forms.Label ch5;
         private System.Windows.Forms.Label ch6;
-        private System.Windows.Forms.Label ChosenOne;
+        private System.Windows.Forms.Label lblChosenOne;
     }
 }
 

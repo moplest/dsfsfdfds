@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayersContainer.cs" />
     <Compile Include="Ruletka.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -74,7 +74,7 @@
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(164, 20);
             this.tbUser.TabIndex = 3;
-            this.tbUser.Text = "probenUser";
+            this.tbUser.Text = "proben user";
             // 
             // tbInputMoney
             // 

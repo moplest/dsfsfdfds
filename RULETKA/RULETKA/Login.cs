@@ -13,6 +13,7 @@ namespace RULETKA
     public partial class Login : Form
     {
         public static Login LoginInstance;
+        PlayersContainer pc = new PlayersContainer();
         public Login()
         {
             LoginInstance = this;
@@ -22,27 +23,37 @@ namespace RULETKA
         private void LoginButton_Click(object sender, EventArgs e)
         {
             double cash = double.Parse(tbInputMoney.Text);
-            string[] usernames = { "probenUser", "Kalevinho", "eBacho" };
-            bool flag = false;
-            for (int i = 0; i < usernames.Length; i++)
+            Player p = pc.getPlayerByName(tbUser.Text);
+            if (p != null)
             {
-                if (tbUser.Text==usernames[i])
+                bool flag = false;
+                if (p.password == "1234")
                 {
                     flag = true;
-                    break;
                 }
-            }
-            if (flag)
-            {
-                if (cash>=100)
+                if (flag)
                 {
-                    this.Hide();
-                    var ruletkaForm = new Ruletka();
-                    ruletkaForm.Show();
-                }
-                else
-                {
-                    lblError.Text = "Malko para si vkaral. Dai poe4e. ;)";
+                    if (cash >= 100 && cash <= p.cardMoney)
+                    {
+                        p.cash4play = cash;
+                        p.cardMoney -= cash;
+                        lblError.Text = "";
+                        this.Hide();
+                        var ruletkaForm = new Ruletka();
+                        ruletkaForm.Show();
+                    }
+                    else
+                    {
+                        lblError.Text = "An error has occured! The selected cash4play \namount is ";
+                        if (cash < 100)
+                        {
+                            lblError.Text += "below the minimum!";
+                        }
+                        else
+                        {
+                            lblError.Text += "more than the money you have in your card!";
+                        }
+                    }
                 }
             }
             else
@@ -50,7 +61,6 @@ namespace RULETKA
                 lblError.Text = "Invalid username! Please try again.";
             }
         }
-
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -16,6 +16,7 @@ namespace RULETKA
         private bool[] IsItFirstClick = new bool[50];
         private Label[] chipForNumber = new Label[50];
         private Label[] rouletteNumber = new Label[50];
+        private Label[] chipForAmount = new Label[6];
         public Ruletka()
         {
             InitializeComponent();
@@ -31,6 +32,11 @@ namespace RULETKA
             {
                 Label lbl = this.Controls.Find("n" + i.ToString(), true).FirstOrDefault() as Label;
                 rouletteNumber[i] = lbl;
+            }
+            for (int i = 0; i < chipForAmount.Length; i++)
+            {
+                Label lbl = this.Controls.Find("ch" + (i+1).ToString(), true).FirstOrDefault() as Label;
+                chipForAmount[i] = lbl;
             }
             //Adding click events
             {
@@ -113,7 +119,6 @@ namespace RULETKA
                 return;
             }
             Login.LoginInstance.Show();
-
         }
         public Label InitializeChipClone(int number)
         {
@@ -156,6 +161,50 @@ namespace RULETKA
                 chipForNumber[lblNo].Text = bet(chipForNumber[lblNo]).ToString();
             }
         }
+        private void clickAChipForAmount(Label lbl)
+        {
+            int lblNo = int.Parse(lbl.Name.Substring(2));
+            lblChosenOne.Location = lbl.Location;
+            switch (lblNo)
+            {
+                case 1:
+                    {
+                        lblChosenOne.Text = "1";
+                        chipAmount = 1;
+                    }
+                    break;
+                case 2:
+                    {
+                        lblChosenOne.Text = "2";
+                        chipAmount = 2;
+                    }
+                    break;
+                case 3:
+                    {
+                        lblChosenOne.Text = "5";
+                        chipAmount = 5;
+                    }
+                    break;
+                case 4:
+                    {
+                        lblChosenOne.Text = "10";
+                        chipAmount = 10;
+                    }
+                    break;
+                case 5:
+                    {
+                        lblChosenOne.Text = "20";
+                        chipAmount = 20;
+                    }
+                    break;
+                case 6:
+                    {
+                        lblChosenOne.Text = "50";
+                        chipAmount = 50;
+                    }
+                    break;
+            }
+        }
         private double bet(Label lbl)
         {
             double currentBet = double.Parse(lbl.Text);
@@ -165,7 +214,6 @@ namespace RULETKA
         private void n0_Click(object sender, EventArgs e)
         {
             clickANumber(n0);
-
         }
         private void n1_Click(object sender, EventArgs e)
         {
@@ -225,27 +273,27 @@ namespace RULETKA
         }
         private void ch1_Click(object sender, EventArgs e)
         {
-            chipAmount = 1;      
+            clickAChipForAmount(ch1);   
         }
         private void ch2_Click(object sender, EventArgs e)
         {
-            chipAmount = 2;
+            clickAChipForAmount(ch2);
         }
         private void ch3_Click(object sender, EventArgs e)
         {
-            chipAmount = 5;
+            clickAChipForAmount(ch3);
         }
         private void ch4_Click(object sender, EventArgs e)
         {
-            chipAmount = 10;
+            clickAChipForAmount(ch4);
         }
         private void ch5_Click(object sender, EventArgs e)
         {
-            chipAmount = 20;
+            clickAChipForAmount(ch5);
         }
         private void ch6_Click(object sender, EventArgs e)
         {
-            chipAmount = 50;
+            clickAChipForAmount(ch6);
         }
     }
 }
