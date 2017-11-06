@@ -167,81 +167,85 @@ namespace RULETKA
             clickANumber(n0);
 
         }
-
         private void n1_Click(object sender, EventArgs e)
         {
             clickANumber(n1);            
         }
-
         private void n2_Click(object sender, EventArgs e)
         {
             clickANumber(n2);
-            chipForNumber[2].Click += n2_Click;
         }
-
         private void n3_Click(object sender, EventArgs e)
         {
             clickANumber(n3);
         }
-
         private void n4_Click(object sender, EventArgs e)
         {
             clickANumber(n4);
         }
-
         private void n5_Click(object sender, EventArgs e)
         {
             clickANumber(n5);
         }
-
         private void n6_Click(object sender, EventArgs e)
         {
             clickANumber(n6);
         }
-
         private void n7_Click(object sender, EventArgs e)
         {
             clickANumber(n7);
         }
-
         private void n8_Click(object sender, EventArgs e)
         {
             clickANumber(n8);
         }
-
         private void n9_Click(object sender, EventArgs e)
         {
             clickANumber(n9);
         }
-
         private void n10_Click(object sender, EventArgs e)
         {
             clickANumber(n10);
         }
-
         private void n11_Click(object sender, EventArgs e)
         {
             clickANumber(n11);
         }
-
         private void n12_Click(object sender, EventArgs e)
         {
             clickANumber(n12);
         }
-
         private void n13_Click(object sender, EventArgs e)
         {
             clickANumber(n13);
         }
-
         private void n37_Click(object sender, EventArgs e)
         {
             clickANumber(n37);
         }
-
+        private void ch1_Click(object sender, EventArgs e)
+        {
+            chipAmount = 1;      
+        }
         private void ch2_Click(object sender, EventArgs e)
         {
             chipAmount = 2;
+        }
+        private void ch3_Click(object sender, EventArgs e)
+        {
+            chipAmount = 5;
+        }
+        private void ch4_Click(object sender, EventArgs e)
+        {
+            chipAmount = 10;
+        }
+        private void ch5_Click(object sender, EventArgs e)
+        {
+            chipAmount = 20;
+        }
+        private void ch6_Click(object sender, EventArgs e)
+        {
+            chipAmount = 50;
         }
     }
 }

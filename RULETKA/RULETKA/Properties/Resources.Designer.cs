@@ -63,6 +63,16 @@ namespace RULETKA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ego_e {
+            get {
+                object obj = ResourceManager.GetObject("ego e", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap goodChip {
             get {
                 object obj = ResourceManager.GetObject("goodChip", resourceCulture);
@@ -93,6 +103,26 @@ namespace RULETKA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap grey_chip {
+            get {
+                object obj = ResourceManager.GetObject("grey chip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lastchip {
+            get {
+                object obj = ResourceManager.GetObject("lastchip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RULETKATA {
             get {
                 object obj = ResourceManager.GetObject("RULETKATA", resourceCulture);
@@ -106,6 +136,36 @@ namespace RULETKA.Properties {
         internal static System.Drawing.Bitmap RULETKATA1 {
             get {
                 object obj = ResourceManager.GetObject("RULETKATA1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RULETKATA2 {
+            get {
+                object obj = ResourceManager.GetObject("RULETKATA2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap THE_CHIP {
+            get {
+                object obj = ResourceManager.GetObject("THE CHIP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap theChosenOne {
+            get {
+                object obj = ResourceManager.GetObject("theChosenOne", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

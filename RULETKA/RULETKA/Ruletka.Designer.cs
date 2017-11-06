@@ -85,6 +85,7 @@
             this.ch4 = new System.Windows.Forms.Label();
             this.ch5 = new System.Windows.Forms.Label();
             this.ch6 = new System.Windows.Forms.Label();
+            this.ChosenOne = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
@@ -110,10 +111,11 @@
             // 
             this.emptyChipPicture.BackColor = System.Drawing.Color.Transparent;
             this.emptyChipPicture.Image = global::RULETKA.Properties.Resources.goodChip2;
-            this.emptyChipPicture.Location = new System.Drawing.Point(313, 260);
+            this.emptyChipPicture.Location = new System.Drawing.Point(1143, 260);
             this.emptyChipPicture.Name = "emptyChipPicture";
             this.emptyChipPicture.Size = new System.Drawing.Size(109, 76);
             this.emptyChipPicture.TabIndex = 2;
+            this.emptyChipPicture.Visible = false;
             // 
             // n2
             // 
@@ -562,65 +564,101 @@
             // ch1
             // 
             this.ch1.BackColor = System.Drawing.Color.Transparent;
+            this.ch1.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch1.Image = global::RULETKA.Properties.Resources.lastchip;
             this.ch1.Location = new System.Drawing.Point(12, 212);
             this.ch1.Name = "ch1";
             this.ch1.Size = new System.Drawing.Size(61, 62);
             this.ch1.TabIndex = 51;
+            this.ch1.Text = "1";
             this.ch1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ch1.Click += new System.EventHandler(this.ch1_Click);
             // 
             // ch2
             // 
             this.ch2.BackColor = System.Drawing.Color.Transparent;
-            this.ch2.Location = new System.Drawing.Point(78, 212);
+            this.ch2.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch2.Image = global::RULETKA.Properties.Resources.lastchip;
+            this.ch2.Location = new System.Drawing.Point(76, 212);
             this.ch2.Name = "ch2";
             this.ch2.Size = new System.Drawing.Size(61, 62);
             this.ch2.TabIndex = 52;
+            this.ch2.Text = "2";
             this.ch2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ch2.Click += new System.EventHandler(this.ch2_Click);
             // 
             // ch3
             // 
             this.ch3.BackColor = System.Drawing.Color.Transparent;
-            this.ch3.Location = new System.Drawing.Point(145, 212);
+            this.ch3.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch3.Image = global::RULETKA.Properties.Resources.lastchip;
+            this.ch3.Location = new System.Drawing.Point(140, 212);
             this.ch3.Name = "ch3";
-            this.ch3.Size = new System.Drawing.Size(61, 62);
+            this.ch3.Size = new System.Drawing.Size(68, 62);
             this.ch3.TabIndex = 53;
+            this.ch3.Text = "5";
             this.ch3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ch3.Click += new System.EventHandler(this.ch3_Click);
             // 
             // ch4
             // 
             this.ch4.BackColor = System.Drawing.Color.Transparent;
-            this.ch4.Location = new System.Drawing.Point(197, 212);
+            this.ch4.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch4.Image = global::RULETKA.Properties.Resources.lastchip;
+            this.ch4.Location = new System.Drawing.Point(208, 212);
             this.ch4.Name = "ch4";
-            this.ch4.Size = new System.Drawing.Size(74, 62);
+            this.ch4.Size = new System.Drawing.Size(60, 60);
             this.ch4.TabIndex = 54;
+            this.ch4.Text = "10";
             this.ch4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ch4.Click += new System.EventHandler(this.ch4_Click);
             // 
             // ch5
             // 
             this.ch5.BackColor = System.Drawing.Color.Transparent;
-            this.ch5.Location = new System.Drawing.Point(268, 212);
+            this.ch5.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch5.Image = global::RULETKA.Properties.Resources.lastchip;
+            this.ch5.Location = new System.Drawing.Point(271, 212);
             this.ch5.Name = "ch5";
             this.ch5.Size = new System.Drawing.Size(61, 62);
             this.ch5.TabIndex = 55;
+            this.ch5.Text = "20";
             this.ch5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ch5.Click += new System.EventHandler(this.ch5_Click);
             // 
             // ch6
             // 
             this.ch6.BackColor = System.Drawing.Color.Transparent;
+            this.ch6.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch6.Image = global::RULETKA.Properties.Resources.lastchip;
             this.ch6.Location = new System.Drawing.Point(335, 212);
             this.ch6.Name = "ch6";
             this.ch6.Size = new System.Drawing.Size(61, 62);
             this.ch6.TabIndex = 56;
+            this.ch6.Text = "50";
             this.ch6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ch6.Click += new System.EventHandler(this.ch6_Click);
+            // 
+            // ChosenOne
+            // 
+            this.ChosenOne.BackColor = System.Drawing.Color.Transparent;
+            this.ChosenOne.Font = new System.Drawing.Font("Goudy Stout", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChosenOne.Image = global::RULETKA.Properties.Resources.theChosenOne;
+            this.ChosenOne.Location = new System.Drawing.Point(12, 212);
+            this.ChosenOne.Name = "ChosenOne";
+            this.ChosenOne.Size = new System.Drawing.Size(61, 61);
+            this.ChosenOne.TabIndex = 57;
+            this.ChosenOne.Text = "1";
+            this.ChosenOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Ruletka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA1;
+            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.ChosenOne);
             this.Controls.Add(this.ch6);
             this.Controls.Add(this.ch5);
             this.Controls.Add(this.ch4);
@@ -748,6 +786,7 @@
         private System.Windows.Forms.Label ch4;
         private System.Windows.Forms.Label ch5;
         private System.Windows.Forms.Label ch6;
+        private System.Windows.Forms.Label ChosenOne;
     }
 }
 

@@ -104,6 +104,24 @@
   <ItemGroup>
     <None Include="Resources\RULETKATA1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RULETKATA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey chip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\THE CHIP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ego e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lastchip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theChosenOne.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
