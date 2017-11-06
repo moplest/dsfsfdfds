@@ -67,7 +67,7 @@
             this.n34 = new System.Windows.Forms.Label();
             this.n35 = new System.Windows.Forms.Label();
             this.n36 = new System.Windows.Forms.Label();
-            this.r1 = new System.Windows.Forms.Label();
+            this.n37 = new System.Windows.Forms.Label();
             this.r2 = new System.Windows.Forms.Label();
             this.r3 = new System.Windows.Forms.Label();
             this.s1 = new System.Windows.Forms.Label();
@@ -450,15 +450,15 @@
             this.n36.TabIndex = 38;
             this.n36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // r1
+            // n37
             // 
-            this.r1.BackColor = System.Drawing.Color.Transparent;
-            this.r1.Location = new System.Drawing.Point(1175, 403);
-            this.r1.Name = "r1";
-            this.r1.Size = new System.Drawing.Size(74, 67);
-            this.r1.TabIndex = 39;
-            this.r1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.r1.Click += new System.EventHandler(this.r1_Click);
+            this.n37.BackColor = System.Drawing.Color.Transparent;
+            this.n37.Location = new System.Drawing.Point(1175, 403);
+            this.n37.Name = "n37";
+            this.n37.Size = new System.Drawing.Size(74, 67);
+            this.n37.TabIndex = 39;
+            this.n37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n37.Click += new System.EventHandler(this.n37_Click);
             // 
             // r2
             // 
@@ -617,7 +617,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA;
+            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.ch6);
@@ -637,7 +637,7 @@
             this.Controls.Add(this.s1);
             this.Controls.Add(this.r3);
             this.Controls.Add(this.r2);
-            this.Controls.Add(this.r1);
+            this.Controls.Add(this.n37);
             this.Controls.Add(this.n36);
             this.Controls.Add(this.n35);
             this.Controls.Add(this.n34);
@@ -729,7 +729,7 @@
         private System.Windows.Forms.Label n34;
         private System.Windows.Forms.Label n35;
         private System.Windows.Forms.Label n36;
-        private System.Windows.Forms.Label r1;
+        private System.Windows.Forms.Label n37;
         private System.Windows.Forms.Label r2;
         private System.Windows.Forms.Label r3;
         private System.Windows.Forms.Label s1;
