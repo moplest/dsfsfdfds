@@ -22,7 +22,8 @@ namespace RULETKA
         public Ruletka()
         {
             InitializeComponent();
-            player = loginForm.p;          
+            player = loginForm.p;
+            lblPlayerName.Text = player.username;          
             for (int i = 0; i < IsItFirstClick.Length; i++)
             {
                 IsItFirstClick[i] = true;
@@ -38,7 +39,7 @@ namespace RULETKA
             }
             for (int i = 0; i < chipForAmount.Length; i++)
             {
-                Label lbl = this.Controls.Find("ch" + (i+1).ToString(), true).FirstOrDefault() as Label;
+                Label lbl = this.Controls.Find("ch" + (i + 1).ToString(), true).FirstOrDefault() as Label;
                 chipForAmount[i] = lbl;
             }
             addClickEvents();    
@@ -110,6 +111,7 @@ namespace RULETKA
         private void goToLoginForm()
         {
             Login.LoginInstance.Show();
+            player.cardMoney += player.cash4play;
             this.Close();
         }
 

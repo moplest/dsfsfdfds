@@ -666,7 +666,6 @@
             this.lblCurrentCash.Size = new System.Drawing.Size(192, 43);
             this.lblCurrentCash.TabIndex = 58;
             this.lblCurrentCash.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblCurrentCash.Visible = false;
             // 
             // lblBet
             // 
@@ -678,7 +677,6 @@
             this.lblBet.Size = new System.Drawing.Size(192, 43);
             this.lblBet.TabIndex = 59;
             this.lblBet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblBet.Visible = false;
             // 
             // lblWin
             // 
@@ -690,7 +688,6 @@
             this.lblWin.Size = new System.Drawing.Size(192, 43);
             this.lblWin.TabIndex = 60;
             this.lblWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblWin.Visible = false;
             // 
             // lblPlayerName
             // 
@@ -702,7 +699,6 @@
             this.lblPlayerName.Size = new System.Drawing.Size(192, 43);
             this.lblPlayerName.TabIndex = 61;
             this.lblPlayerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPlayerName.Visible = false;
             // 
             // MaxWin
             // 
@@ -714,7 +710,6 @@
             this.MaxWin.Size = new System.Drawing.Size(192, 43);
             this.MaxWin.TabIndex = 62;
             this.MaxWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.MaxWin.Visible = false;
             // 
             // Ruletka
             // 

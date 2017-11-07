@@ -17,14 +17,6 @@ namespace RULETKA
             playersContainer = new Player[] { p1, p2, p3 };
         }
 
-        //public static PlayersContainer getInstance()
-        //{
-        //    if (instance==null)
-        //    {
-        //        instance = new PlayersContainer();
-        //    }
-        //    return instance;
-        //}
         public Player getPlayerByName(string name)
         {
             Player p = null;
