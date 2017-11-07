@@ -86,6 +86,11 @@
             this.ch5 = new System.Windows.Forms.Label();
             this.ch6 = new System.Windows.Forms.Label();
             this.lblChosenOne = new System.Windows.Forms.Label();
+            this.lblCurrentCash = new System.Windows.Forms.Label();
+            this.lblBet = new System.Windows.Forms.Label();
+            this.lblWin = new System.Windows.Forms.Label();
+            this.lblPlayerName = new System.Windows.Forms.Label();
+            this.MaxWin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
@@ -651,6 +656,66 @@
             this.lblChosenOne.Text = "1";
             this.lblChosenOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblCurrentCash
+            // 
+            this.lblCurrentCash.BackColor = System.Drawing.Color.Transparent;
+            this.lblCurrentCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentCash.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCurrentCash.Location = new System.Drawing.Point(194, 9);
+            this.lblCurrentCash.Name = "lblCurrentCash";
+            this.lblCurrentCash.Size = new System.Drawing.Size(192, 43);
+            this.lblCurrentCash.TabIndex = 58;
+            this.lblCurrentCash.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCurrentCash.Visible = false;
+            // 
+            // lblBet
+            // 
+            this.lblBet.BackColor = System.Drawing.Color.Transparent;
+            this.lblBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBet.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblBet.Location = new System.Drawing.Point(194, 52);
+            this.lblBet.Name = "lblBet";
+            this.lblBet.Size = new System.Drawing.Size(192, 43);
+            this.lblBet.TabIndex = 59;
+            this.lblBet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBet.Visible = false;
+            // 
+            // lblWin
+            // 
+            this.lblWin.BackColor = System.Drawing.Color.Transparent;
+            this.lblWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWin.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblWin.Location = new System.Drawing.Point(194, 104);
+            this.lblWin.Name = "lblWin";
+            this.lblWin.Size = new System.Drawing.Size(192, 43);
+            this.lblWin.TabIndex = 60;
+            this.lblWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWin.Visible = false;
+            // 
+            // lblPlayerName
+            // 
+            this.lblPlayerName.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerName.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblPlayerName.Location = new System.Drawing.Point(100, 160);
+            this.lblPlayerName.Name = "lblPlayerName";
+            this.lblPlayerName.Size = new System.Drawing.Size(192, 43);
+            this.lblPlayerName.TabIndex = 61;
+            this.lblPlayerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayerName.Visible = false;
+            // 
+            // MaxWin
+            // 
+            this.MaxWin.BackColor = System.Drawing.Color.Transparent;
+            this.MaxWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxWin.ForeColor = System.Drawing.SystemColors.Control;
+            this.MaxWin.Location = new System.Drawing.Point(1034, 9);
+            this.MaxWin.Name = "MaxWin";
+            this.MaxWin.Size = new System.Drawing.Size(192, 43);
+            this.MaxWin.TabIndex = 62;
+            this.MaxWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MaxWin.Visible = false;
+            // 
             // Ruletka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -658,6 +723,11 @@
             this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.MaxWin);
+            this.Controls.Add(this.lblPlayerName);
+            this.Controls.Add(this.lblWin);
+            this.Controls.Add(this.lblBet);
+            this.Controls.Add(this.lblCurrentCash);
             this.Controls.Add(this.lblChosenOne);
             this.Controls.Add(this.ch6);
             this.Controls.Add(this.ch5);
@@ -787,6 +857,11 @@
         private System.Windows.Forms.Label ch5;
         private System.Windows.Forms.Label ch6;
         private System.Windows.Forms.Label lblChosenOne;
+        private System.Windows.Forms.Label lblCurrentCash;
+        private System.Windows.Forms.Label lblBet;
+        private System.Windows.Forms.Label lblWin;
+        private System.Windows.Forms.Label lblPlayerName;
+        private System.Windows.Forms.Label MaxWin;
     }
 }
 

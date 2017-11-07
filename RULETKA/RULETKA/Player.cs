@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RULETKA
 {
-    class Player
+    public class Player
     {
         public Player(string username, string password, double cardMoney)
         {

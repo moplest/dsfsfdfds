@@ -14,16 +14,16 @@ namespace RULETKA
     {
         public static Login LoginInstance;
         PlayersContainer pc = new PlayersContainer();
+        public Player p = null;
         public Login()
         {
             LoginInstance = this;
             InitializeComponent();
         }
-
         private void LoginButton_Click(object sender, EventArgs e)
         {
             double cash = double.Parse(tbInputMoney.Text);
-            Player p = pc.getPlayerByName(tbUser.Text);
+            p = pc.getPlayerByName(tbUser.Text);
             if (p != null)
             {
                 if (p.password == "1234")

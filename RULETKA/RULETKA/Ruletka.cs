@@ -13,6 +13,8 @@ namespace RULETKA
     public partial class Ruletka : Form
     {
         private double chipAmount = 1;
+        private Login loginForm = Login.LoginInstance;
+        private Player player;
         private bool[] IsItFirstClick = new bool[50];
         private Label[] chipForNumber = new Label[50];
         private Label[] rouletteNumber = new Label[50];
@@ -20,6 +22,7 @@ namespace RULETKA
         public Ruletka()
         {
             InitializeComponent();
+            player = loginForm.p;          
             for (int i = 0; i < IsItFirstClick.Length; i++)
             {
                 IsItFirstClick[i] = true;
@@ -38,66 +41,65 @@ namespace RULETKA
                 Label lbl = this.Controls.Find("ch" + (i+1).ToString(), true).FirstOrDefault() as Label;
                 chipForAmount[i] = lbl;
             }
-            //Adding click events
-            {
-                chipForNumber[0].Click += n0_Click;
-                chipForNumber[1].Click += n1_Click;
-                chipForNumber[2].Click += n2_Click;
-                chipForNumber[3].Click += n3_Click;
-                chipForNumber[4].Click += n4_Click;
-                chipForNumber[5].Click += n5_Click;
-                chipForNumber[6].Click += n6_Click;
-                chipForNumber[7].Click += n7_Click;
-                chipForNumber[8].Click += n8_Click;
-                chipForNumber[9].Click += n9_Click;
-                chipForNumber[10].Click += n10_Click;
-                chipForNumber[11].Click += n11_Click;
-                chipForNumber[12].Click += n12_Click;
-                chipForNumber[13].Click += n13_Click;
-                //chipForNumber[14].Click += n14_Click;
-                //chipForNumber[15].Click += n15_Click;
-                //chipForNumber[16].Click += n16_Click;
-                //chipForNumber[17].Click += n17_Click;
-                //chipForNumber[18].Click += n18_Click;
-                //chipForNumber[19].Click += n19_Click;
-                //chipForNumber[20].Click += n20_Click;
-                //chipForNumber[21].Click += n21_Click;
-                //chipForNumber[22].Click += n22_Click;
-                //chipForNumber[23].Click += n23_Click;
-                //chipForNumber[24].Click += n24_Click;
-                //chipForNumber[25].Click += n25_Click;
-                //chipForNumber[26].Click += n26_Click;
-                //chipForNumber[27].Click += n27_Click;
-                //chipForNumber[28].Click += n28_Click;
-                //chipForNumber[29].Click += n29_Click;
-                //chipForNumber[30].Click += n30_Click;
-                //chipForNumber[31].Click += n31_Click;
-                //chipForNumber[32].Click += n32_Click;
-                //chipForNumber[33].Click += n33_Click;
-                //chipForNumber[34].Click += n34_Click;
-                //chipForNumber[35].Click += n35_Click;
-                //chipForNumber[36].Click += n36_Click;
-                //chipForNumber[37].Click += n37_Click;
-                //chipForNumber[38].Click += n38_Click;
-                //chipForNumber[39].Click += n39_Click;
-                //chipForNumber[40].Click += n40_Click;
-                //chipForNumber[41].Click += n41_Click;
-                //chipForNumber[42].Click += n42_Click;
-                //chipForNumber[43].Click += n43_Click;
-                //chipForNumber[44].Click += n44_Click;
-                //chipForNumber[45].Click += n45_Click;
-                //chipForNumber[46].Click += n46_Click;
-                //chipForNumber[47].Click += n47_Click;
-                //chipForNumber[48].Click += n48_Click;
-                //chipForNumber[49].Click += n49_Click;
-                //chipForNumber[50].Click += n50_Click;
-            } 
+            addClickEvents();    
+        }
+        private void addClickEvents()
+        {
+            chipForNumber[0].Click += n0_Click;
+            chipForNumber[1].Click += n1_Click;
+            chipForNumber[2].Click += n2_Click;
+            chipForNumber[3].Click += n3_Click;
+            chipForNumber[4].Click += n4_Click;
+            chipForNumber[5].Click += n5_Click;
+            chipForNumber[6].Click += n6_Click;
+            chipForNumber[7].Click += n7_Click;
+            chipForNumber[8].Click += n8_Click;
+            chipForNumber[9].Click += n9_Click;
+            chipForNumber[10].Click += n10_Click;
+            chipForNumber[11].Click += n11_Click;
+            chipForNumber[12].Click += n12_Click;
+            chipForNumber[13].Click += n13_Click;
+            //chipForNumber[14].Click += n14_Click;
+            //chipForNumber[15].Click += n15_Click;
+            //chipForNumber[16].Click += n16_Click;
+            //chipForNumber[17].Click += n17_Click;
+            //chipForNumber[18].Click += n18_Click;
+            //chipForNumber[19].Click += n19_Click;
+            //chipForNumber[20].Click += n20_Click;
+            //chipForNumber[21].Click += n21_Click;
+            //chipForNumber[22].Click += n22_Click;
+            //chipForNumber[23].Click += n23_Click;
+            //chipForNumber[24].Click += n24_Click;
+            //chipForNumber[25].Click += n25_Click;
+            //chipForNumber[26].Click += n26_Click;
+            //chipForNumber[27].Click += n27_Click;
+            //chipForNumber[28].Click += n28_Click;
+            //chipForNumber[29].Click += n29_Click;
+            //chipForNumber[30].Click += n30_Click;
+            //chipForNumber[31].Click += n31_Click;
+            //chipForNumber[32].Click += n32_Click;
+            //chipForNumber[33].Click += n33_Click;
+            //chipForNumber[34].Click += n34_Click;
+            //chipForNumber[35].Click += n35_Click;
+            //chipForNumber[36].Click += n36_Click;
+            //chipForNumber[37].Click += n37_Click;
+            //chipForNumber[38].Click += n38_Click;
+            //chipForNumber[39].Click += n39_Click;
+            //chipForNumber[40].Click += n40_Click;
+            //chipForNumber[41].Click += n41_Click;
+            //chipForNumber[42].Click += n42_Click;
+            //chipForNumber[43].Click += n43_Click;
+            //chipForNumber[44].Click += n44_Click;
+            //chipForNumber[45].Click += n45_Click;
+            //chipForNumber[46].Click += n46_Click;
+            //chipForNumber[47].Click += n47_Click;
+            //chipForNumber[48].Click += n48_Click;
+            //chipForNumber[49].Click += n49_Click;
+            //chipForNumber[50].Click += n50_Click;
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
               goToLoginForm();
-            //p.cardMoney+=cash4play;
-            //p.cash4play=0;
         }
 
         private void Ruletka_Load(object sender, EventArgs e)
