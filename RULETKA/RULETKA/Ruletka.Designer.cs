@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnExit = new System.Windows.Forms.Label();
             this.n1 = new System.Windows.Forms.Label();
             this.emptyChipPicture = new System.Windows.Forms.Label();
@@ -68,17 +69,17 @@
             this.n35 = new System.Windows.Forms.Label();
             this.n36 = new System.Windows.Forms.Label();
             this.n37 = new System.Windows.Forms.Label();
-            this.r2 = new System.Windows.Forms.Label();
-            this.r3 = new System.Windows.Forms.Label();
-            this.s1 = new System.Windows.Forms.Label();
-            this.s2 = new System.Windows.Forms.Label();
-            this.s3 = new System.Windows.Forms.Label();
-            this.first18 = new System.Windows.Forms.Label();
-            this.second18 = new System.Windows.Forms.Label();
-            this.even = new System.Windows.Forms.Label();
-            this.odd = new System.Windows.Forms.Label();
-            this.red = new System.Windows.Forms.Label();
-            this.black = new System.Windows.Forms.Label();
+            this.n38 = new System.Windows.Forms.Label();
+            this.n39 = new System.Windows.Forms.Label();
+            this.n46 = new System.Windows.Forms.Label();
+            this.n47 = new System.Windows.Forms.Label();
+            this.n48 = new System.Windows.Forms.Label();
+            this.n45 = new System.Windows.Forms.Label();
+            this.n40 = new System.Windows.Forms.Label();
+            this.n44 = new System.Windows.Forms.Label();
+            this.n41 = new System.Windows.Forms.Label();
+            this.n43 = new System.Windows.Forms.Label();
+            this.n42 = new System.Windows.Forms.Label();
             this.ch1 = new System.Windows.Forms.Label();
             this.ch2 = new System.Windows.Forms.Label();
             this.ch3 = new System.Windows.Forms.Label();
@@ -92,6 +93,14 @@
             this.lblPlayerName = new System.Windows.Forms.Label();
             this.MaxWin = new System.Windows.Forms.Label();
             this.lblText = new System.Windows.Forms.Label();
+            this.pbRedLine = new System.Windows.Forms.PictureBox();
+            this.tm = new System.Windows.Forms.Timer(this.components);
+            this.lblLastBet = new System.Windows.Forms.Label();
+            this.lblLastWin = new System.Windows.Forms.Label();
+            this.lblRollNumber = new System.Windows.Forms.Label();
+            this.lblWinningNumber = new System.Windows.Forms.Label();
+            this.lblHelp = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRedLine)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -249,6 +258,7 @@
             this.n15.Size = new System.Drawing.Size(63, 67);
             this.n15.TabIndex = 15;
             this.n15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n15.Click += new System.EventHandler(this.n15_Click);
             // 
             // n14
             // 
@@ -258,6 +268,7 @@
             this.n14.Size = new System.Drawing.Size(74, 67);
             this.n14.TabIndex = 16;
             this.n14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n14.Click += new System.EventHandler(this.n14_Click);
             // 
             // n13
             // 
@@ -277,6 +288,7 @@
             this.n18.Size = new System.Drawing.Size(74, 67);
             this.n18.TabIndex = 18;
             this.n18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n18.Click += new System.EventHandler(this.n18_Click);
             // 
             // n17
             // 
@@ -286,6 +298,7 @@
             this.n17.Size = new System.Drawing.Size(74, 67);
             this.n17.TabIndex = 19;
             this.n17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n17.Click += new System.EventHandler(this.n17_Click);
             // 
             // n16
             // 
@@ -295,6 +308,7 @@
             this.n16.Size = new System.Drawing.Size(74, 67);
             this.n16.TabIndex = 20;
             this.n16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n16.Click += new System.EventHandler(this.n16_Click);
             // 
             // n21
             // 
@@ -304,6 +318,7 @@
             this.n21.Size = new System.Drawing.Size(64, 67);
             this.n21.TabIndex = 21;
             this.n21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n21.Click += new System.EventHandler(this.n21_Click);
             // 
             // n20
             // 
@@ -313,6 +328,7 @@
             this.n20.Size = new System.Drawing.Size(74, 67);
             this.n20.TabIndex = 22;
             this.n20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n20.Click += new System.EventHandler(this.n20_Click);
             // 
             // n19
             // 
@@ -322,6 +338,7 @@
             this.n19.Size = new System.Drawing.Size(74, 67);
             this.n19.TabIndex = 23;
             this.n19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n19.Click += new System.EventHandler(this.n19_Click);
             // 
             // n24
             // 
@@ -331,6 +348,7 @@
             this.n24.Size = new System.Drawing.Size(74, 67);
             this.n24.TabIndex = 24;
             this.n24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n24.Click += new System.EventHandler(this.n24_Click);
             // 
             // n23
             // 
@@ -340,6 +358,7 @@
             this.n23.Size = new System.Drawing.Size(74, 67);
             this.n23.TabIndex = 25;
             this.n23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n23.Click += new System.EventHandler(this.n23_Click);
             // 
             // n22
             // 
@@ -349,6 +368,7 @@
             this.n22.Size = new System.Drawing.Size(74, 67);
             this.n22.TabIndex = 26;
             this.n22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n22.Click += new System.EventHandler(this.n22_Click);
             // 
             // n27
             // 
@@ -358,6 +378,7 @@
             this.n27.Size = new System.Drawing.Size(74, 67);
             this.n27.TabIndex = 27;
             this.n27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n27.Click += new System.EventHandler(this.n27_Click);
             // 
             // n26
             // 
@@ -367,6 +388,7 @@
             this.n26.Size = new System.Drawing.Size(74, 67);
             this.n26.TabIndex = 28;
             this.n26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n26.Click += new System.EventHandler(this.n26_Click);
             // 
             // n25
             // 
@@ -376,6 +398,7 @@
             this.n25.Size = new System.Drawing.Size(74, 67);
             this.n25.TabIndex = 29;
             this.n25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n25.Click += new System.EventHandler(this.n25_Click);
             // 
             // n30
             // 
@@ -385,6 +408,7 @@
             this.n30.Size = new System.Drawing.Size(74, 67);
             this.n30.TabIndex = 30;
             this.n30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n30.Click += new System.EventHandler(this.n30_Click);
             // 
             // n29
             // 
@@ -394,6 +418,7 @@
             this.n29.Size = new System.Drawing.Size(74, 67);
             this.n29.TabIndex = 31;
             this.n29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n29.Click += new System.EventHandler(this.n29_Click);
             // 
             // n28
             // 
@@ -403,6 +428,7 @@
             this.n28.Size = new System.Drawing.Size(74, 67);
             this.n28.TabIndex = 32;
             this.n28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n28.Click += new System.EventHandler(this.n28_Click);
             // 
             // n31
             // 
@@ -412,6 +438,7 @@
             this.n31.Size = new System.Drawing.Size(74, 67);
             this.n31.TabIndex = 33;
             this.n31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n31.Click += new System.EventHandler(this.n31_Click);
             // 
             // n32
             // 
@@ -421,6 +448,7 @@
             this.n32.Size = new System.Drawing.Size(74, 67);
             this.n32.TabIndex = 34;
             this.n32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n32.Click += new System.EventHandler(this.n32_Click);
             // 
             // n33
             // 
@@ -430,6 +458,7 @@
             this.n33.Size = new System.Drawing.Size(74, 67);
             this.n33.TabIndex = 35;
             this.n33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n33.Click += new System.EventHandler(this.n33_Click);
             // 
             // n34
             // 
@@ -439,6 +468,7 @@
             this.n34.Size = new System.Drawing.Size(74, 67);
             this.n34.TabIndex = 36;
             this.n34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n34.Click += new System.EventHandler(this.n34_Click);
             // 
             // n35
             // 
@@ -448,6 +478,7 @@
             this.n35.Size = new System.Drawing.Size(74, 67);
             this.n35.TabIndex = 37;
             this.n35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n35.Click += new System.EventHandler(this.n35_Click);
             // 
             // n36
             // 
@@ -457,6 +488,7 @@
             this.n36.Size = new System.Drawing.Size(74, 67);
             this.n36.TabIndex = 38;
             this.n36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n36.Click += new System.EventHandler(this.n36_Click);
             // 
             // n37
             // 
@@ -468,104 +500,115 @@
             this.n37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.n37.Click += new System.EventHandler(this.n37_Click);
             // 
-            // r2
+            // n38
             // 
-            this.r2.BackColor = System.Drawing.Color.Transparent;
-            this.r2.Location = new System.Drawing.Point(1175, 472);
-            this.r2.Name = "r2";
-            this.r2.Size = new System.Drawing.Size(74, 67);
-            this.r2.TabIndex = 40;
-            this.r2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n38.BackColor = System.Drawing.Color.Transparent;
+            this.n38.Location = new System.Drawing.Point(1175, 472);
+            this.n38.Name = "n38";
+            this.n38.Size = new System.Drawing.Size(74, 67);
+            this.n38.TabIndex = 40;
+            this.n38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n38.Click += new System.EventHandler(this.n38_Click);
             // 
-            // r3
+            // n39
             // 
-            this.r3.BackColor = System.Drawing.Color.Transparent;
-            this.r3.Location = new System.Drawing.Point(1175, 540);
-            this.r3.Name = "r3";
-            this.r3.Size = new System.Drawing.Size(74, 67);
-            this.r3.TabIndex = 41;
-            this.r3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n39.BackColor = System.Drawing.Color.Transparent;
+            this.n39.Location = new System.Drawing.Point(1175, 540);
+            this.n39.Name = "n39";
+            this.n39.Size = new System.Drawing.Size(74, 67);
+            this.n39.TabIndex = 41;
+            this.n39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n39.Click += new System.EventHandler(this.n39_Click);
             // 
-            // s1
+            // n46
             // 
-            this.s1.BackColor = System.Drawing.Color.Transparent;
-            this.s1.Location = new System.Drawing.Point(268, 336);
-            this.s1.Name = "s1";
-            this.s1.Size = new System.Drawing.Size(304, 67);
-            this.s1.TabIndex = 42;
-            this.s1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n46.BackColor = System.Drawing.Color.Transparent;
+            this.n46.Location = new System.Drawing.Point(268, 336);
+            this.n46.Name = "n46";
+            this.n46.Size = new System.Drawing.Size(304, 67);
+            this.n46.TabIndex = 42;
+            this.n46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n46.Click += new System.EventHandler(this.n46_Click);
             // 
-            // s2
+            // n47
             // 
-            this.s2.BackColor = System.Drawing.Color.Transparent;
-            this.s2.Location = new System.Drawing.Point(567, 336);
-            this.s2.Name = "s2";
-            this.s2.Size = new System.Drawing.Size(304, 67);
-            this.s2.TabIndex = 43;
-            this.s2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n47.BackColor = System.Drawing.Color.Transparent;
+            this.n47.Location = new System.Drawing.Point(567, 336);
+            this.n47.Name = "n47";
+            this.n47.Size = new System.Drawing.Size(304, 67);
+            this.n47.TabIndex = 43;
+            this.n47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n47.Click += new System.EventHandler(this.n47_Click);
             // 
-            // s3
+            // n48
             // 
-            this.s3.BackColor = System.Drawing.Color.Transparent;
-            this.s3.Location = new System.Drawing.Point(865, 336);
-            this.s3.Name = "s3";
-            this.s3.Size = new System.Drawing.Size(304, 67);
-            this.s3.TabIndex = 44;
-            this.s3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n48.BackColor = System.Drawing.Color.Transparent;
+            this.n48.Location = new System.Drawing.Point(865, 336);
+            this.n48.Name = "n48";
+            this.n48.Size = new System.Drawing.Size(304, 67);
+            this.n48.TabIndex = 44;
+            this.n48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n48.Click += new System.EventHandler(this.n48_Click);
             // 
-            // first18
+            // n45
             // 
-            this.first18.BackColor = System.Drawing.Color.Transparent;
-            this.first18.Location = new System.Drawing.Point(268, 607);
-            this.first18.Name = "first18";
-            this.first18.Size = new System.Drawing.Size(144, 65);
-            this.first18.TabIndex = 45;
-            this.first18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n45.BackColor = System.Drawing.Color.Transparent;
+            this.n45.Location = new System.Drawing.Point(268, 607);
+            this.n45.Name = "n45";
+            this.n45.Size = new System.Drawing.Size(144, 65);
+            this.n45.TabIndex = 45;
+            this.n45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n45.Click += new System.EventHandler(this.n45_Click);
             // 
-            // second18
+            // n40
             // 
-            this.second18.BackColor = System.Drawing.Color.Transparent;
-            this.second18.Location = new System.Drawing.Point(1025, 607);
-            this.second18.Name = "second18";
-            this.second18.Size = new System.Drawing.Size(144, 65);
-            this.second18.TabIndex = 46;
-            this.second18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n40.BackColor = System.Drawing.Color.Transparent;
+            this.n40.Location = new System.Drawing.Point(1025, 607);
+            this.n40.Name = "n40";
+            this.n40.Size = new System.Drawing.Size(144, 65);
+            this.n40.TabIndex = 46;
+            this.n40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n40.Click += new System.EventHandler(this.n40_Click);
             // 
-            // even
+            // n44
             // 
-            this.even.BackColor = System.Drawing.Color.Transparent;
-            this.even.Location = new System.Drawing.Point(418, 607);
-            this.even.Name = "even";
-            this.even.Size = new System.Drawing.Size(154, 65);
-            this.even.TabIndex = 47;
-            this.even.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n44.BackColor = System.Drawing.Color.Transparent;
+            this.n44.Location = new System.Drawing.Point(418, 607);
+            this.n44.Name = "n44";
+            this.n44.Size = new System.Drawing.Size(154, 65);
+            this.n44.TabIndex = 47;
+            this.n44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n44.Click += new System.EventHandler(this.n44_Click);
             // 
-            // odd
+            // n41
             // 
-            this.odd.BackColor = System.Drawing.Color.Transparent;
-            this.odd.Location = new System.Drawing.Point(873, 607);
-            this.odd.Name = "odd";
-            this.odd.Size = new System.Drawing.Size(144, 65);
-            this.odd.TabIndex = 48;
-            this.odd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n41.BackColor = System.Drawing.Color.Transparent;
+            this.n41.Location = new System.Drawing.Point(873, 607);
+            this.n41.Name = "n41";
+            this.n41.Size = new System.Drawing.Size(144, 65);
+            this.n41.TabIndex = 48;
+            this.n41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n41.Click += new System.EventHandler(this.n41_Click);
             // 
-            // red
+            // n43
             // 
-            this.red.BackColor = System.Drawing.Color.Transparent;
-            this.red.Location = new System.Drawing.Point(570, 607);
-            this.red.Name = "red";
-            this.red.Size = new System.Drawing.Size(151, 65);
-            this.red.TabIndex = 49;
-            this.red.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n43.BackColor = System.Drawing.Color.Transparent;
+            this.n43.Location = new System.Drawing.Point(570, 607);
+            this.n43.Name = "n43";
+            this.n43.Size = new System.Drawing.Size(151, 65);
+            this.n43.TabIndex = 49;
+            this.n43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n43.Click += new System.EventHandler(this.n43_Click);
             // 
-            // black
+            // n42
             // 
-            this.black.BackColor = System.Drawing.Color.Transparent;
-            this.black.Location = new System.Drawing.Point(723, 607);
-            this.black.Name = "black";
-            this.black.Size = new System.Drawing.Size(144, 65);
-            this.black.TabIndex = 50;
-            this.black.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n42.BackColor = System.Drawing.Color.Transparent;
+            this.n42.Location = new System.Drawing.Point(723, 607);
+            this.n42.Name = "n42";
+            this.n42.Size = new System.Drawing.Size(144, 65);
+            this.n42.TabIndex = 50;
+            this.n42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.n42.Click += new System.EventHandler(this.n42_Click);
             // 
             // ch1
             // 
@@ -666,7 +709,7 @@
             this.lblCurrentCash.Name = "lblCurrentCash";
             this.lblCurrentCash.Size = new System.Drawing.Size(192, 43);
             this.lblCurrentCash.TabIndex = 58;
-            this.lblCurrentCash.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCurrentCash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblBet
             // 
@@ -677,7 +720,7 @@
             this.lblBet.Name = "lblBet";
             this.lblBet.Size = new System.Drawing.Size(192, 43);
             this.lblBet.TabIndex = 59;
-            this.lblBet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblWin
             // 
@@ -688,7 +731,7 @@
             this.lblWin.Name = "lblWin";
             this.lblWin.Size = new System.Drawing.Size(192, 43);
             this.lblWin.TabIndex = 60;
-            this.lblWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblPlayerName
             // 
@@ -710,7 +753,7 @@
             this.MaxWin.Name = "MaxWin";
             this.MaxWin.Size = new System.Drawing.Size(192, 43);
             this.MaxWin.TabIndex = 62;
-            this.MaxWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MaxWin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblText
             // 
@@ -723,13 +766,78 @@
             this.lblText.TabIndex = 63;
             this.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pbRedLine
+            // 
+            this.pbRedLine.BackgroundImage = global::RULETKA.Properties.Resources.redLine;
+            this.pbRedLine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbRedLine.Location = new System.Drawing.Point(494, 59);
+            this.pbRedLine.Name = "pbRedLine";
+            this.pbRedLine.Size = new System.Drawing.Size(100, 16);
+            this.pbRedLine.TabIndex = 64;
+            this.pbRedLine.TabStop = false;
+            // 
+            // tm
+            // 
+            this.tm.Interval = 80;
+            this.tm.Tick += new System.EventHandler(this.tm_Tick);
+            // 
+            // lblLastBet
+            // 
+            this.lblLastBet.BackColor = System.Drawing.Color.Transparent;
+            this.lblLastBet.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblLastBet.Location = new System.Drawing.Point(984, 52);
+            this.lblLastBet.Name = "lblLastBet";
+            this.lblLastBet.Size = new System.Drawing.Size(80, 23);
+            this.lblLastBet.TabIndex = 65;
+            this.lblLastBet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblLastWin
+            // 
+            this.lblLastWin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLastWin.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblLastWin.Location = new System.Drawing.Point(1148, 56);
+            this.lblLastWin.Name = "lblLastWin";
+            this.lblLastWin.Size = new System.Drawing.Size(78, 19);
+            this.lblLastWin.TabIndex = 66;
+            this.lblLastWin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblRollNumber
+            // 
+            this.lblRollNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblRollNumber.Location = new System.Drawing.Point(845, 10);
+            this.lblRollNumber.Name = "lblRollNumber";
+            this.lblRollNumber.Size = new System.Drawing.Size(63, 64);
+            this.lblRollNumber.TabIndex = 67;
+            // 
+            // lblWinningNumber
+            // 
+            this.lblWinningNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblWinningNumber.Location = new System.Drawing.Point(411, 11);
+            this.lblWinningNumber.Name = "lblWinningNumber";
+            this.lblWinningNumber.Size = new System.Drawing.Size(60, 62);
+            this.lblWinningNumber.TabIndex = 68;
+            // 
+            // lblHelp
+            // 
+            this.lblHelp.BackColor = System.Drawing.Color.Transparent;
+            this.lblHelp.Location = new System.Drawing.Point(107, 382);
+            this.lblHelp.Name = "lblHelp";
+            this.lblHelp.Size = new System.Drawing.Size(81, 46);
+            this.lblHelp.TabIndex = 69;
+            // 
             // Ruletka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA2;
+            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblHelp);
+            this.Controls.Add(this.lblWinningNumber);
+            this.Controls.Add(this.lblRollNumber);
+            this.Controls.Add(this.lblLastWin);
+            this.Controls.Add(this.lblLastBet);
+            this.Controls.Add(this.pbRedLine);
             this.Controls.Add(this.lblText);
             this.Controls.Add(this.MaxWin);
             this.Controls.Add(this.lblPlayerName);
@@ -743,17 +851,17 @@
             this.Controls.Add(this.ch3);
             this.Controls.Add(this.ch2);
             this.Controls.Add(this.ch1);
-            this.Controls.Add(this.black);
-            this.Controls.Add(this.red);
-            this.Controls.Add(this.odd);
-            this.Controls.Add(this.even);
-            this.Controls.Add(this.second18);
-            this.Controls.Add(this.first18);
-            this.Controls.Add(this.s3);
-            this.Controls.Add(this.s2);
-            this.Controls.Add(this.s1);
-            this.Controls.Add(this.r3);
-            this.Controls.Add(this.r2);
+            this.Controls.Add(this.n42);
+            this.Controls.Add(this.n43);
+            this.Controls.Add(this.n41);
+            this.Controls.Add(this.n44);
+            this.Controls.Add(this.n40);
+            this.Controls.Add(this.n45);
+            this.Controls.Add(this.n48);
+            this.Controls.Add(this.n47);
+            this.Controls.Add(this.n46);
+            this.Controls.Add(this.n39);
+            this.Controls.Add(this.n38);
             this.Controls.Add(this.n37);
             this.Controls.Add(this.n36);
             this.Controls.Add(this.n35);
@@ -801,6 +909,7 @@
             this.Name = "Ruletka";
             this.Text = "Casino Roulette";
             this.Load += new System.EventHandler(this.Ruletka_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbRedLine)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -847,17 +956,17 @@
         private System.Windows.Forms.Label n35;
         private System.Windows.Forms.Label n36;
         private System.Windows.Forms.Label n37;
-        private System.Windows.Forms.Label r2;
-        private System.Windows.Forms.Label r3;
-        private System.Windows.Forms.Label s1;
-        private System.Windows.Forms.Label s2;
-        private System.Windows.Forms.Label s3;
-        private System.Windows.Forms.Label first18;
-        private System.Windows.Forms.Label second18;
-        private System.Windows.Forms.Label even;
-        private System.Windows.Forms.Label odd;
-        private System.Windows.Forms.Label red;
-        private System.Windows.Forms.Label black;
+        private System.Windows.Forms.Label n38;
+        private System.Windows.Forms.Label n39;
+        private System.Windows.Forms.Label n46;
+        private System.Windows.Forms.Label n47;
+        private System.Windows.Forms.Label n48;
+        private System.Windows.Forms.Label n45;
+        private System.Windows.Forms.Label n40;
+        private System.Windows.Forms.Label n44;
+        private System.Windows.Forms.Label n41;
+        private System.Windows.Forms.Label n43;
+        private System.Windows.Forms.Label n42;
         private System.Windows.Forms.Label ch1;
         private System.Windows.Forms.Label ch2;
         private System.Windows.Forms.Label ch3;
@@ -871,6 +980,13 @@
         private System.Windows.Forms.Label lblPlayerName;
         private System.Windows.Forms.Label MaxWin;
         private System.Windows.Forms.Label lblText;
+        private System.Windows.Forms.PictureBox pbRedLine;
+        private System.Windows.Forms.Timer tm;
+        private System.Windows.Forms.Label lblLastBet;
+        private System.Windows.Forms.Label lblLastWin;
+        private System.Windows.Forms.Label lblRollNumber;
+        private System.Windows.Forms.Label lblWinningNumber;
+        private System.Windows.Forms.Label lblHelp;
     }
 }
 
