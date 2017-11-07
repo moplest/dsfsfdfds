@@ -22,6 +22,7 @@ namespace RULETKA
         public Ruletka()
         {
             InitializeComponent();
+            lblCurrency.Text = loginForm.currency;
             lblBet.Text = "0";
             player = loginForm.p;
             lblPlayerName.Text = player.username;

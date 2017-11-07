@@ -100,6 +100,7 @@
             this.lblRollNumber = new System.Windows.Forms.Label();
             this.lblWinningNumber = new System.Windows.Forms.Label();
             this.lblHelp = new System.Windows.Forms.Label();
+            this.lblCurrency = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbRedLine)).BeginInit();
             this.SuspendLayout();
             // 
@@ -825,6 +826,17 @@
             this.lblHelp.Size = new System.Drawing.Size(81, 46);
             this.lblHelp.TabIndex = 69;
             // 
+            // lblCurrency
+            // 
+            this.lblCurrency.BackColor = System.Drawing.Color.Transparent;
+            this.lblCurrency.Font = new System.Drawing.Font("Maiandra GD", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrency.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCurrency.Location = new System.Drawing.Point(25, 9);
+            this.lblCurrency.Name = "lblCurrency";
+            this.lblCurrency.Size = new System.Drawing.Size(121, 43);
+            this.lblCurrency.TabIndex = 70;
+            this.lblCurrency.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Ruletka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -832,6 +844,7 @@
             this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblCurrency);
             this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.lblWinningNumber);
             this.Controls.Add(this.lblRollNumber);
@@ -987,6 +1000,7 @@
         private System.Windows.Forms.Label lblRollNumber;
         private System.Windows.Forms.Label lblWinningNumber;
         private System.Windows.Forms.Label lblHelp;
+        private System.Windows.Forms.Label lblCurrency;
     }
 }
 

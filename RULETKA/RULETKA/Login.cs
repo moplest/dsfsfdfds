@@ -15,6 +15,7 @@ namespace RULETKA
         public static Login LoginInstance;
         PlayersContainer pc = new PlayersContainer();
         public Player p = null;
+        public string currency;
         public Login()
         {
             LoginInstance = this;
@@ -24,6 +25,7 @@ namespace RULETKA
         {
             double cash = double.Parse(tbInputMoney.Text);
             p = pc.getPlayerByName(tbUser.Text);
+            currency = cbCurrancy.Text;
             if (p != null)
             {
                 if (p.password == "1234")
