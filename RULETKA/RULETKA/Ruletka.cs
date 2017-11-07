@@ -96,6 +96,8 @@ namespace RULETKA
         private void btnExit_Click(object sender, EventArgs e)
         {
               goToLoginForm();
+            //p.cardMoney+=cash4play;
+            //p.cash4play=0;
         }
 
         private void Ruletka_Load(object sender, EventArgs e)

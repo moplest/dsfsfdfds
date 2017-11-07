@@ -26,12 +26,7 @@ namespace RULETKA
             Player p = pc.getPlayerByName(tbUser.Text);
             if (p != null)
             {
-                bool flag = false;
                 if (p.password == "1234")
-                {
-                    flag = true;
-                }
-                if (flag)
                 {
                     if (cash >= 100 && cash <= p.cardMoney)
                     {
