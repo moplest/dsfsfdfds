@@ -91,6 +91,7 @@
             this.lblWin = new System.Windows.Forms.Label();
             this.lblPlayerName = new System.Windows.Forms.Label();
             this.MaxWin = new System.Windows.Forms.Label();
+            this.lblText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
@@ -116,7 +117,7 @@
             // 
             this.emptyChipPicture.BackColor = System.Drawing.Color.Transparent;
             this.emptyChipPicture.Image = global::RULETKA.Properties.Resources.goodChip2;
-            this.emptyChipPicture.Location = new System.Drawing.Point(1143, 260);
+            this.emptyChipPicture.Location = new System.Drawing.Point(1140, 184);
             this.emptyChipPicture.Name = "emptyChipPicture";
             this.emptyChipPicture.Size = new System.Drawing.Size(109, 76);
             this.emptyChipPicture.TabIndex = 2;
@@ -711,6 +712,17 @@
             this.MaxWin.TabIndex = 62;
             this.MaxWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblText
+            // 
+            this.lblText.BackColor = System.Drawing.Color.Transparent;
+            this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblText.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblText.Location = new System.Drawing.Point(16, 274);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(1233, 53);
+            this.lblText.TabIndex = 63;
+            this.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Ruletka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -718,6 +730,7 @@
             this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblText);
             this.Controls.Add(this.MaxWin);
             this.Controls.Add(this.lblPlayerName);
             this.Controls.Add(this.lblWin);
@@ -857,6 +870,7 @@
         private System.Windows.Forms.Label lblWin;
         private System.Windows.Forms.Label lblPlayerName;
         private System.Windows.Forms.Label MaxWin;
+        private System.Windows.Forms.Label lblText;
     }
 }
 

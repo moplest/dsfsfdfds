@@ -22,8 +22,10 @@ namespace RULETKA
         public Ruletka()
         {
             InitializeComponent();
+            lblBet.Text = "0";
             player = loginForm.p;
-            lblPlayerName.Text = player.username;          
+            lblPlayerName.Text = player.username;
+            lblCurrentCash.Text = player.cash4play.ToString();       
             for (int i = 0; i < IsItFirstClick.Length; i++)
             {
                 IsItFirstClick[i] = true;
@@ -98,6 +100,7 @@ namespace RULETKA
             //chipForNumber[49].Click += n49_Click;
             //chipForNumber[50].Click += n50_Click;
         }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
               goToLoginForm();
@@ -136,6 +139,7 @@ namespace RULETKA
             pb.Size = new System.Drawing.Size(44, 44);
             pb.Location = new Point(0, 0);
             pb.Name = "ECP" + number.ToString();
+            pb.Text = "0";
             pb.TextAlign = ContentAlignment.MiddleCenter;
             pb.TabIndex = 2;
             pb.TabStop = false;
@@ -157,15 +161,12 @@ namespace RULETKA
             if (IsItFirstClick[lblNo])
             {
                 chipForNumber[lblNo].Visible = true;
-                chipForNumber[lblNo].BringToFront();
-                chipForNumber[lblNo].Text = chipAmount.ToString();
+                chipForNumber[lblNo].BringToFront();               
                 chipForNumber[lblNo].Location = putNewChipLocation(chipForNumber[lblNo], lbl);
                 IsItFirstClick[lblNo] = false;
-            }
-            else
-            {
-                chipForNumber[lblNo].Text = bet(chipForNumber[lblNo]).ToString();
-            }
+            }            
+            
+                chipForNumber[lblNo].Text = bet(chipForNumber[lblNo]).ToString();          
         }
         private void clickAChipForAmount(Label lbl)
         {
@@ -213,10 +214,21 @@ namespace RULETKA
         }
         private double bet(Label lbl)
         {
+            double currentCash = double.Parse(lblCurrentCash.Text);
             double currentBet = double.Parse(lbl.Text);
-            double newBet = currentBet + chipAmount;
-            return newBet;
+            double newBet = currentBet;
+            double betNow = double.Parse(lblBet.Text);                          
+            if (chipAmount <= currentCash)
+            {
+              betNow += chipAmount;
+              newBet = currentBet + chipAmount;
+              lblBet.Text = betNow.ToString();
+              currentCash -= chipAmount;
+              lblCurrentCash.Text = currentCash.ToString();                  
+            }      
+            return newBet;                 
         }
+       
         private void n0_Click(object sender, EventArgs e)
         {
             clickANumber(n0);
