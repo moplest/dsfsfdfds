@@ -15,18 +15,21 @@ namespace RULETKA
         private double chipAmount = 1;
         private Login loginForm = Login.LoginInstance;
         private Player player;
-        private bool[] IsItFirstClick = new bool[49];
-        private Label[] chipForNumber = new Label[49];
+        private bool[] IsItFirstClick = new bool[37];
+        private Label[] chipForNumber = new Label[37];
         private Label[] rouletteNumber = new Label[49];
         private Label[] chipForAmount = new Label[6];
+        private int[] redNumbers = { 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 };
+        private int[] blackNumbers = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
         public Ruletka()
         {
             InitializeComponent();
-            lblCurrency.Text = loginForm.currency;
             lblBet.Text = "0";
+            lblWin.Text = "0";
             player = loginForm.p;
+            lblCurrency.Text = loginForm.currency;
             lblPlayerName.Text = player.username;
-            lblCurrentCash.Text = player.cash4play.ToString();       
+            lblCurrentCash.Text = player.cash4play.ToString();
             for (int i = 0; i < IsItFirstClick.Length; i++)
             {
                 IsItFirstClick[i] = true;
@@ -49,21 +52,18 @@ namespace RULETKA
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-              goToLoginForm();
+            goToLoginForm();
         }
-
         private void Ruletka_Load(object sender, EventArgs e)
         {
 
         }
-
         private void goToLoginForm()
         {
             Login.LoginInstance.Show();
             player.cardMoney += player.cash4play;
             this.Close();
         }
-
         protected override void OnFormClosing(FormClosingEventArgs e)
         {//метод при който при натискане на "Х" 
          //освен че затваря прозореца, ни отваря обратно логин формата
@@ -101,18 +101,127 @@ namespace RULETKA
                 (lbl.Location.Y + (lbl.Height / 2) - (chip.Width / 2)));
             return pnt;
         }
-        private void clickANumber(Label lbl)
+        private void clickANumber(Label lbl, int lblNo)
         {
-            int lblNo = int.Parse(lbl.Name.Substring(1));
             if (IsItFirstClick[lblNo])
             {
                 chipForNumber[lblNo].Visible = true;
-                chipForNumber[lblNo].BringToFront();               
+                chipForNumber[lblNo].BringToFront();
                 chipForNumber[lblNo].Location = putNewChipLocation(chipForNumber[lblNo], lbl);
                 IsItFirstClick[lblNo] = false;
-            }            
-            
-                chipForNumber[lblNo].Text = bet(chipForNumber[lblNo]).ToString();          
+            }
+            chipForNumber[lblNo].Text = bet(chipForNumber[lblNo]).ToString();
+        }
+        private void bettingSystemLogic(Label lbl)
+        {
+            int lblNo = int.Parse(lbl.Name.Substring(1));
+            if (lblNo < 37)
+            {
+                clickANumber(lbl, lblNo);
+            }
+            else if (lblNo > 36 && lblNo < 40)
+            {
+                for (int i = 1; i < 37; i++)
+                {
+                    if (lbl.Location.Y == rouletteNumber[i].Location.Y)
+                    {
+                        clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                    }
+                }
+            }
+            else
+            {
+                switch (lblNo)
+                {
+                    case 40:
+                        {
+                            for (int i = 19; i < 37; i++)
+                            {
+                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                            }
+                        }
+                        break;
+                    case 41:
+                        {
+                            for (int i = 1; i < 37; i += 2)
+                            {
+                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                            }
+                        }
+                        break;
+                    case 42:
+                        {
+                            for (int i = 0; i < blackNumbers.Length; i++)
+                            {
+                                clickANumber(rouletteNumber[blackNumbers[i]], blackNumbers[i]);
+                            }
+                        }
+                        break;
+                    case 43:
+                        {
+                            for (int i = 0; i < redNumbers.Length; i++)
+                            {
+                                clickANumber(rouletteNumber[redNumbers[i]], redNumbers[i]);
+                            }
+                        }
+                        break;
+                    case 44:
+                        {
+                            for (int i = 2; i < 37; i += 2)
+                            {
+                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                            }
+                        }
+                        break;
+                    case 45:
+                        {
+                            for (int i = 1; i < 19; i++)
+                            {
+                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                            }
+                        }
+                        break;
+                    case 46:
+                        {
+                            for (int i = 1; i < 13; i++)
+                            {
+                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                            }
+                        }
+                        break;
+                    case 47:
+                        {
+                            for (int i = 13; i < 25; i++)
+                            {
+                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                            }
+                        }
+                        break;
+                    case 48:
+                        {
+                            for (int i = 25; i < 37; i++)
+                            {
+                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                            }
+                        }
+                        break;
+                } //end switch
+            }            //end else
+            MaxWin.Text = calculateMaxWin();
+        }
+        private string calculateMaxWin()
+        {
+            double max = 0;
+            for (int i = 0; i < chipForNumber.Length; i++)
+            {
+                double currentBetOnNumber = double.Parse(chipForNumber[i].Text);
+                if (currentBetOnNumber > max)
+                {
+                    max = currentBetOnNumber;
+                }
+            }
+            max *= 36;
+            return max.ToString();
         }
         private void clickAChipForAmount(Label lbl)
         {
@@ -163,217 +272,230 @@ namespace RULETKA
             double currentCash = double.Parse(lblCurrentCash.Text);
             double currentBet = double.Parse(lbl.Text);
             double newBet = currentBet;
-            double betNow = double.Parse(lblBet.Text);                          
+            double betNow = double.Parse(lblBet.Text);
             if (chipAmount <= currentCash)
             {
-              betNow += chipAmount;
-              newBet = currentBet + chipAmount;
-              lblBet.Text = betNow.ToString();
-              currentCash -= chipAmount;
-              lblCurrentCash.Text = currentCash.ToString();                  
-            }      
-            return newBet;                 
+                betNow += chipAmount;
+                newBet = currentBet + chipAmount;
+                lblBet.Text = betNow.ToString();
+                currentCash -= chipAmount;
+                lblCurrentCash.Text = currentCash.ToString();
+            }
+            return newBet;
         }
         //********************TIMER*********************
         private void tm_Tick(object sender, EventArgs e)
         {
 
         }
+        private void restartGame()
+        {
+            lblLastWin.Text = lblWin.Text;
+            player.cash4play += double.Parse(lblWin.Text);
+            lblWin.Text = "0";
+            MaxWin.Text = "";
+            lblLastBet.Text = lblBet.Text;
+            lblBet.Text = "0";
+        }
+        private void lblTestRestart_Click(object sender, EventArgs e)
+        {
+            restartGame();
+        }
         private void n0_Click(object sender, EventArgs e)
         {
-            clickANumber(n0);
+            bettingSystemLogic(n0);
         }
         private void n1_Click(object sender, EventArgs e)
         {
-            clickANumber(n1);            
+            bettingSystemLogic(n1);
         }
         private void n2_Click(object sender, EventArgs e)
         {
-            clickANumber(n2);
+            bettingSystemLogic(n2);
         }
         private void n3_Click(object sender, EventArgs e)
         {
-            clickANumber(n3);
+            bettingSystemLogic(n3);
         }
         private void n4_Click(object sender, EventArgs e)
         {
-            clickANumber(n4);
+            bettingSystemLogic(n4);
         }
         private void n5_Click(object sender, EventArgs e)
         {
-            clickANumber(n5);
+            bettingSystemLogic(n5);
         }
         private void n6_Click(object sender, EventArgs e)
         {
-            clickANumber(n6);
+            bettingSystemLogic(n6);
         }
         private void n7_Click(object sender, EventArgs e)
         {
-            clickANumber(n7);
+            bettingSystemLogic(n7);
         }
         private void n8_Click(object sender, EventArgs e)
         {
-            clickANumber(n8);
+            bettingSystemLogic(n8);
         }
         private void n9_Click(object sender, EventArgs e)
         {
-            clickANumber(n9);
+            bettingSystemLogic(n9);
         }
         private void n10_Click(object sender, EventArgs e)
         {
-            clickANumber(n10);
+            bettingSystemLogic(n10);
         }
         private void n11_Click(object sender, EventArgs e)
         {
-            clickANumber(n11);
+            bettingSystemLogic(n11);
         }
         private void n12_Click(object sender, EventArgs e)
         {
-            clickANumber(n12);
+            bettingSystemLogic(n12);
         }
         private void n13_Click(object sender, EventArgs e)
         {
-            clickANumber(n13);
+            bettingSystemLogic(n13);
         }
         private void n14_Click(object sender, EventArgs e)
         {
-            clickANumber(n14);
+            bettingSystemLogic(n14);
         }
         private void n15_Click(object sender, EventArgs e)
         {
-            clickANumber(n15);
+            bettingSystemLogic(n15);
         }
         private void n16_Click(object sender, EventArgs e)
         {
-            clickANumber(n16);
+            bettingSystemLogic(n16);
         }
         private void n17_Click(object sender, EventArgs e)
         {
-            clickANumber(n17);
+            bettingSystemLogic(n17);
         }
         private void n18_Click(object sender, EventArgs e)
         {
-            clickANumber(n18);
+            bettingSystemLogic(n18);
         }
         private void n19_Click(object sender, EventArgs e)
         {
-            clickANumber(n19);
+            bettingSystemLogic(n19);
         }
         private void n20_Click(object sender, EventArgs e)
         {
-            clickANumber(n20);
+            bettingSystemLogic(n20);
         }
         private void n21_Click(object sender, EventArgs e)
         {
-            clickANumber(n21);
+            bettingSystemLogic(n21);
         }
         private void n22_Click(object sender, EventArgs e)
         {
-            clickANumber(n22);
+            bettingSystemLogic(n22);
         }
         private void n23_Click(object sender, EventArgs e)
         {
-            clickANumber(n23);
+            bettingSystemLogic(n23);
         }
         private void n24_Click(object sender, EventArgs e)
         {
-            clickANumber(n24);
+            bettingSystemLogic(n24);
         }
         private void n25_Click(object sender, EventArgs e)
         {
-            clickANumber(n25);
+            bettingSystemLogic(n25);
         }
         private void n26_Click(object sender, EventArgs e)
         {
-            clickANumber(n26);
+            bettingSystemLogic(n26);
         }
         private void n27_Click(object sender, EventArgs e)
         {
-            clickANumber(n27);
+            bettingSystemLogic(n27);
         }
         private void n28_Click(object sender, EventArgs e)
         {
-            clickANumber(n28);
+            bettingSystemLogic(n28);
         }
         private void n29_Click(object sender, EventArgs e)
         {
-            clickANumber(n29);
+            bettingSystemLogic(n29);
         }
         private void n30_Click(object sender, EventArgs e)
         {
-            clickANumber(n30);
+            bettingSystemLogic(n30);
         }
         private void n31_Click(object sender, EventArgs e)
         {
-            clickANumber(n31);
+            bettingSystemLogic(n31);
         }
         private void n32_Click(object sender, EventArgs e)
         {
-            clickANumber(n32);
+            bettingSystemLogic(n32);
         }
         private void n33_Click(object sender, EventArgs e)
         {
-            clickANumber(n33);
+            bettingSystemLogic(n33);
         }
         private void n34_Click(object sender, EventArgs e)
         {
-            clickANumber(n34);
+            bettingSystemLogic(n34);
         }
         private void n35_Click(object sender, EventArgs e)
         {
-            clickANumber(n35);
+            bettingSystemLogic(n35);
         }
         private void n36_Click(object sender, EventArgs e)
         {
-            clickANumber(n36);
+            bettingSystemLogic(n36);
         }
         private void n37_Click(object sender, EventArgs e)
         {
-            clickANumber(n37);
+            bettingSystemLogic(n37);
         }
         private void n38_Click(object sender, EventArgs e)
         {
-            clickANumber(n38);
+            bettingSystemLogic(n38);
         }
         private void n39_Click(object sender, EventArgs e)
         {
-            clickANumber(n39);
+            bettingSystemLogic(n39);
         }
         private void n40_Click(object sender, EventArgs e)
         {
-            clickANumber(n40);
+            bettingSystemLogic(n40);
         }
         private void n41_Click(object sender, EventArgs e)
         {
-            clickANumber(n41);
+            bettingSystemLogic(n41);
         }
         private void n42_Click(object sender, EventArgs e)
         {
-            clickANumber(n42);
+            bettingSystemLogic(n42);
         }
         private void n43_Click(object sender, EventArgs e)
         {
-            clickANumber(n43);
+            bettingSystemLogic(n43);
         }
         private void n44_Click(object sender, EventArgs e)
         {
-            clickANumber(n44);
+            bettingSystemLogic(n44);
         }
         private void n45_Click(object sender, EventArgs e)
         {
-            clickANumber(n45);
+            bettingSystemLogic(n45);
         }
         private void n46_Click(object sender, EventArgs e)
         {
-            clickANumber(n46);
+            bettingSystemLogic(n46);
         }
         private void n47_Click(object sender, EventArgs e)
         {
-            clickANumber(n47);
+            bettingSystemLogic(n47);
         }
         private void n48_Click(object sender, EventArgs e)
         {
-            clickANumber(n48);
+            bettingSystemLogic(n48);
         }
         private void ch1_Click(object sender, EventArgs e)
         {
@@ -438,18 +560,6 @@ namespace RULETKA
             chipForNumber[34].Click += n34_Click;
             chipForNumber[35].Click += n35_Click;
             chipForNumber[36].Click += n36_Click;
-            chipForNumber[37].Click += n37_Click;
-            chipForNumber[38].Click += n38_Click;
-            chipForNumber[39].Click += n39_Click;
-            chipForNumber[40].Click += n40_Click;
-            chipForNumber[41].Click += n41_Click;
-            chipForNumber[42].Click += n42_Click;
-            chipForNumber[43].Click += n43_Click;
-            chipForNumber[44].Click += n44_Click;
-            chipForNumber[45].Click += n45_Click;
-            chipForNumber[46].Click += n46_Click;
-            chipForNumber[47].Click += n47_Click;
-            chipForNumber[48].Click += n48_Click;
         }
     }
 }

@@ -101,6 +101,7 @@
             this.lblWinningNumber = new System.Windows.Forms.Label();
             this.lblHelp = new System.Windows.Forms.Label();
             this.lblCurrency = new System.Windows.Forms.Label();
+            this.lblTestRestart = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbRedLine)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,7 +175,7 @@
             // n5
             // 
             this.n5.BackColor = System.Drawing.Color.Transparent;
-            this.n5.Location = new System.Drawing.Point(348, 473);
+            this.n5.Location = new System.Drawing.Point(348, 471);
             this.n5.Name = "n5";
             this.n5.Size = new System.Drawing.Size(74, 67);
             this.n5.TabIndex = 7;
@@ -204,7 +205,7 @@
             // n8
             // 
             this.n8.BackColor = System.Drawing.Color.Transparent;
-            this.n8.Location = new System.Drawing.Point(418, 473);
+            this.n8.Location = new System.Drawing.Point(418, 471);
             this.n8.Name = "n8";
             this.n8.Size = new System.Drawing.Size(74, 67);
             this.n8.TabIndex = 10;
@@ -224,7 +225,7 @@
             // n10
             // 
             this.n10.BackColor = System.Drawing.Color.Transparent;
-            this.n10.Location = new System.Drawing.Point(498, 539);
+            this.n10.Location = new System.Drawing.Point(498, 540);
             this.n10.Name = "n10";
             this.n10.Size = new System.Drawing.Size(74, 67);
             this.n10.TabIndex = 12;
@@ -264,7 +265,7 @@
             // n14
             // 
             this.n14.BackColor = System.Drawing.Color.Transparent;
-            this.n14.Location = new System.Drawing.Point(567, 472);
+            this.n14.Location = new System.Drawing.Point(567, 471);
             this.n14.Name = "n14";
             this.n14.Size = new System.Drawing.Size(74, 67);
             this.n14.TabIndex = 16;
@@ -274,7 +275,7 @@
             // n13
             // 
             this.n13.BackColor = System.Drawing.Color.Transparent;
-            this.n13.Location = new System.Drawing.Point(567, 538);
+            this.n13.Location = new System.Drawing.Point(567, 540);
             this.n13.Name = "n13";
             this.n13.Size = new System.Drawing.Size(74, 67);
             this.n13.TabIndex = 17;
@@ -294,7 +295,7 @@
             // n17
             // 
             this.n17.BackColor = System.Drawing.Color.Transparent;
-            this.n17.Location = new System.Drawing.Point(647, 470);
+            this.n17.Location = new System.Drawing.Point(647, 471);
             this.n17.Name = "n17";
             this.n17.Size = new System.Drawing.Size(74, 67);
             this.n17.TabIndex = 19;
@@ -324,7 +325,7 @@
             // n20
             // 
             this.n20.BackColor = System.Drawing.Color.Transparent;
-            this.n20.Location = new System.Drawing.Point(717, 473);
+            this.n20.Location = new System.Drawing.Point(717, 471);
             this.n20.Name = "n20";
             this.n20.Size = new System.Drawing.Size(74, 67);
             this.n20.TabIndex = 22;
@@ -354,7 +355,7 @@
             // n23
             // 
             this.n23.BackColor = System.Drawing.Color.Transparent;
-            this.n23.Location = new System.Drawing.Point(793, 470);
+            this.n23.Location = new System.Drawing.Point(793, 471);
             this.n23.Name = "n23";
             this.n23.Size = new System.Drawing.Size(74, 67);
             this.n23.TabIndex = 25;
@@ -384,7 +385,7 @@
             // n26
             // 
             this.n26.BackColor = System.Drawing.Color.Transparent;
-            this.n26.Location = new System.Drawing.Point(873, 470);
+            this.n26.Location = new System.Drawing.Point(873, 471);
             this.n26.Name = "n26";
             this.n26.Size = new System.Drawing.Size(74, 67);
             this.n26.TabIndex = 28;
@@ -444,7 +445,7 @@
             // n32
             // 
             this.n32.BackColor = System.Drawing.Color.Transparent;
-            this.n32.Location = new System.Drawing.Point(1024, 470);
+            this.n32.Location = new System.Drawing.Point(1024, 471);
             this.n32.Name = "n32";
             this.n32.Size = new System.Drawing.Size(74, 67);
             this.n32.TabIndex = 34;
@@ -464,7 +465,7 @@
             // n34
             // 
             this.n34.BackColor = System.Drawing.Color.Transparent;
-            this.n34.Location = new System.Drawing.Point(1095, 539);
+            this.n34.Location = new System.Drawing.Point(1095, 540);
             this.n34.Name = "n34";
             this.n34.Size = new System.Drawing.Size(74, 67);
             this.n34.TabIndex = 36;
@@ -474,7 +475,7 @@
             // n35
             // 
             this.n35.BackColor = System.Drawing.Color.Transparent;
-            this.n35.Location = new System.Drawing.Point(1095, 470);
+            this.n35.Location = new System.Drawing.Point(1095, 471);
             this.n35.Name = "n35";
             this.n35.Size = new System.Drawing.Size(74, 67);
             this.n35.TabIndex = 37;
@@ -504,7 +505,7 @@
             // n38
             // 
             this.n38.BackColor = System.Drawing.Color.Transparent;
-            this.n38.Location = new System.Drawing.Point(1175, 472);
+            this.n38.Location = new System.Drawing.Point(1175, 471);
             this.n38.Name = "n38";
             this.n38.Size = new System.Drawing.Size(74, 67);
             this.n38.TabIndex = 40;
@@ -829,13 +830,22 @@
             // lblCurrency
             // 
             this.lblCurrency.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurrency.Font = new System.Drawing.Font("Maiandra GD", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrency.ForeColor = System.Drawing.SystemColors.Control;
             this.lblCurrency.Location = new System.Drawing.Point(25, 9);
             this.lblCurrency.Name = "lblCurrency";
             this.lblCurrency.Size = new System.Drawing.Size(121, 43);
             this.lblCurrency.TabIndex = 70;
             this.lblCurrency.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestRestart
+            // 
+            this.lblTestRestart.Location = new System.Drawing.Point(46, 523);
+            this.lblTestRestart.Name = "lblTestRestart";
+            this.lblTestRestart.Size = new System.Drawing.Size(100, 37);
+            this.lblTestRestart.TabIndex = 71;
+            this.lblTestRestart.Text = "Restart Test";
+            this.lblTestRestart.Click += new System.EventHandler(this.lblTestRestart_Click);
             // 
             // Ruletka
             // 
@@ -844,6 +854,7 @@
             this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblTestRestart);
             this.Controls.Add(this.lblCurrency);
             this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.lblWinningNumber);
@@ -1001,6 +1012,7 @@
         private System.Windows.Forms.Label lblWinningNumber;
         private System.Windows.Forms.Label lblHelp;
         private System.Windows.Forms.Label lblCurrency;
+        private System.Windows.Forms.Label lblTestRestart;
     }
 }
 
