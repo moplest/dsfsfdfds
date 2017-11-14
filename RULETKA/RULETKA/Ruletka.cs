@@ -22,6 +22,7 @@ namespace RULETKA
         private Label[] chipForAmount = new Label[6];
         private int[] redNumbers = { 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 };
         private int[] blackNumbers = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
+        private int timeLeft = 60;
         public Ruletka()
         {
             InitializeComponent();         
@@ -320,10 +321,21 @@ namespace RULETKA
         //********************TIMER*********************
         private void tm_Tick(object sender, EventArgs e)
         {
- 
+            timeLeft--;
+            lblText.Text = timeLeft.ToString();
+            if (timeLeft == 0)
+            {
+                
+                
+                // disable buttons;
+            }
         }
         private void tmPicture_Tick(object sender, EventArgs e)
         {
+            if (pbRedLine.Width == 328)
+            {
+                tmPicture.Stop();
+            }
             pbRedLine.Width++;
         }
         private void restartGame()
@@ -334,6 +346,8 @@ namespace RULETKA
             MaxWin.Text = "";
             lblLastBet.Text = lblBet.Text;
             lblBet.Text = "0";
+            tm.Start();
+            tmPicture.Start();
         }
         private void lblTestRestart_Click(object sender, EventArgs e)
         {
