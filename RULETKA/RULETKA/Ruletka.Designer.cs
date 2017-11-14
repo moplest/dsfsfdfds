@@ -781,7 +781,7 @@
             // 
             // tm
             // 
-            this.tm.Interval = 1000;
+            this.tm.Interval = 500;
             this.tm.Tick += new System.EventHandler(this.tm_Tick);
             // 
             // lblLastBet
@@ -807,10 +807,13 @@
             // lblRollNumber
             // 
             this.lblRollNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblRollNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRollNumber.ForeColor = System.Drawing.SystemColors.Control;
             this.lblRollNumber.Location = new System.Drawing.Point(845, 10);
             this.lblRollNumber.Name = "lblRollNumber";
             this.lblRollNumber.Size = new System.Drawing.Size(63, 64);
             this.lblRollNumber.TabIndex = 67;
+            this.lblRollNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblWinningNumber
             // 

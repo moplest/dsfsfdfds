@@ -23,6 +23,7 @@ namespace RULETKA
         private int[] redNumbers = { 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 };
         private int[] blackNumbers = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
         private int timeLeft = 60;
+        private Random random = new Random();
         public Ruletka()
         {
             InitializeComponent();         
@@ -135,130 +136,133 @@ namespace RULETKA
         }
         private void bettingSystemLogic(Label lbl)
         {
-            int counter = 0;
-            List<Label> theseNumbers = new List<Label>();
-            int lblNo = int.Parse(lbl.Name.Substring(1));
-            bool needed = false;
-            if (lblNo < 37)
+            if (timeLeft >= 0)
             {
-                needed = false;
-                clickANumber(lbl, lblNo);
-            }
-            else if (lblNo > 36 && lblNo < 40)
-            {
-                needed = true;
-                for (int i = 1; i < 37; i++)
+                int counter = 0;
+                List<Label> theseNumbers = new List<Label>();
+                int lblNo = int.Parse(lbl.Name.Substring(1));
+                bool needed = false;
+                if (lblNo < 37)
                 {
-                    if (lbl.Location.Y == rouletteNumber[i].Location.Y)
+                    needed = false;
+                    clickANumber(lbl, lblNo);
+                }
+                else if (lblNo > 36 && lblNo < 40)
+                {
+                    needed = true;
+                    for (int i = 1; i < 37; i++)
                     {
-                        counter++;
-                        theseNumbers.Add(rouletteNumber[i]);
+                        if (lbl.Location.Y == rouletteNumber[i].Location.Y)
+                        {
+                            counter++;
+                            theseNumbers.Add(rouletteNumber[i]);
+                        }
                     }
                 }
-            }
-            else
-            {
-                needed = true;
-                switch (lblNo)
+                else
                 {
-                    case 40:
-                        {
-                            for (int i = 19; i < 37; i++)
-                            {
-                                counter++;
-                                theseNumbers.Add(rouletteNumber[i]);
-                            }
-                        }
-                        break;
-                    case 41:
-                        {
-                            for (int i = 1; i < 37; i += 2)
-                            {
-                                counter++;
-                                theseNumbers.Add(rouletteNumber[i]);
-                            }
-                        }
-                        break;
-                    case 42:
-                        {
-                            for (int i = 0; i < blackNumbers.Length; i++)
-                            {
-                                counter++;
-                                theseNumbers.Add(rouletteNumber[blackNumbers[i]]);
-                                //clickANumber(rouletteNumber[blackNumbers[i]], blackNumbers[i]);
-                            }
-                        }
-                        break;
-                    case 43:
-                        {
-                            for (int i = 0; i < redNumbers.Length; i++)
-                            {
-                                counter++;
-                                theseNumbers.Add(rouletteNumber[redNumbers[i]]);
-                                //clickANumber(rouletteNumber[redNumbers[i]], redNumbers[i]);
-                            }
-                        }
-                        break;
-                    case 44:
-                        {
-                            for (int i = 2; i < 37; i += 2)
-                            {
-                                counter++;
-                                theseNumbers.Add(rouletteNumber[i]);
-                            }
-                        }
-                        break;
-                    case 45:
-                        {
-                            for (int i = 1; i < 19; i++)
-                            {
-                                counter++;
-                                theseNumbers.Add(rouletteNumber[i]);
-                            }
-                        }
-                        break;
-                    case 46:
-                        {
-                            for (int i = 1; i < 13; i++)
-                            {
-                                counter++;
-                                theseNumbers.Add(rouletteNumber[i]);
-                            }
-                        }
-                        break;
-                    case 47:
-                        {
-                            for (int i = 13; i < 25; i++)
-                            {
-                                counter++;
-                                theseNumbers.Add(rouletteNumber[i]);
-                            }
-                        }
-                        break;
-                    case 48:
-                        {
-                            for (int i = 25; i < 37; i++)
-                            {
-                                counter++;
-                                theseNumbers.Add(rouletteNumber[i]);
-                            }
-                        }
-                        break;
-                } //end switch
-            }            //end else
-            if (needed)
-            {
-                if (counter * chipAmount <= player.cash4play)
-                {
-                    foreach (var n in theseNumbers)
+                    needed = true;
+                    switch (lblNo)
                     {
-                        clickANumber(n, int.Parse(n.Name.Substring(1)));
+                        case 40:
+                            {
+                                for (int i = 19; i < 37; i++)
+                                {
+                                    counter++;
+                                    theseNumbers.Add(rouletteNumber[i]);
+                                }
+                            }
+                            break;
+                        case 41:
+                            {
+                                for (int i = 1; i < 37; i += 2)
+                                {
+                                    counter++;
+                                    theseNumbers.Add(rouletteNumber[i]);
+                                }
+                            }
+                            break;
+                        case 42:
+                            {
+                                for (int i = 0; i < blackNumbers.Length; i++)
+                                {
+                                    counter++;
+                                    theseNumbers.Add(rouletteNumber[blackNumbers[i]]);
+                                    //clickANumber(rouletteNumber[blackNumbers[i]], blackNumbers[i]);
+                                }
+                            }
+                            break;
+                        case 43:
+                            {
+                                for (int i = 0; i < redNumbers.Length; i++)
+                                {
+                                    counter++;
+                                    theseNumbers.Add(rouletteNumber[redNumbers[i]]);
+                                    //clickANumber(rouletteNumber[redNumbers[i]], redNumbers[i]);
+                                }
+                            }
+                            break;
+                        case 44:
+                            {
+                                for (int i = 2; i < 37; i += 2)
+                                {
+                                    counter++;
+                                    theseNumbers.Add(rouletteNumber[i]);
+                                }
+                            }
+                            break;
+                        case 45:
+                            {
+                                for (int i = 1; i < 19; i++)
+                                {
+                                    counter++;
+                                    theseNumbers.Add(rouletteNumber[i]);
+                                }
+                            }
+                            break;
+                        case 46:
+                            {
+                                for (int i = 1; i < 13; i++)
+                                {
+                                    counter++;
+                                    theseNumbers.Add(rouletteNumber[i]);
+                                }
+                            }
+                            break;
+                        case 47:
+                            {
+                                for (int i = 13; i < 25; i++)
+                                {
+                                    counter++;
+                                    theseNumbers.Add(rouletteNumber[i]);
+                                }
+                            }
+                            break;
+                        case 48:
+                            {
+                                for (int i = 25; i < 37; i++)
+                                {
+                                    counter++;
+                                    theseNumbers.Add(rouletteNumber[i]);
+                                }
+                            }
+                            break;
+                    } //end switch
+                }            //end else
+                if (needed)
+                {
+                    if (counter * chipAmount <= player.cash4play)
+                    {
+                        foreach (var n in theseNumbers)
+                        {
+                            clickANumber(n, int.Parse(n.Name.Substring(1)));
+                        }
+                        theseNumbers.Clear();
+                        counter = 0;
                     }
-                    theseNumbers.Clear();
-                    counter = 0;
                 }
+                MaxWin.Text = calculateMaxWin();
             }
-            MaxWin.Text = calculateMaxWin();
         }
         private string calculateMaxWin()
         {
@@ -322,13 +326,22 @@ namespace RULETKA
         private void tm_Tick(object sender, EventArgs e)
         {
             timeLeft--;
-            lblText.Text = timeLeft.ToString();
-            if (timeLeft == 0)
+            if (timeLeft < 5 && timeLeft > -5 )
             {
+                    int randomNumber = random.Next(0, 36);
+                    lblRollNumber.Text = randomNumber.ToString();
                 
-                
+            }
+            if (timeLeft < -1)
+            {
+                lblText.Text = "No More Bets";                  
                 // disable buttons;
             }
+            else if (timeLeft <= 60 && timeLeft >= 20)
+            {
+                lblText.Text = "Please Place Your Bets !!";
+            }
+            else lblText.Text = "Last Bets !";
         }
         private void tmPicture_Tick(object sender, EventArgs e)
         {
@@ -338,6 +351,7 @@ namespace RULETKA
             }
             pbRedLine.Width++;
         }
+
         private void restartGame()
         {
             lblLastWin.Text = lblWin.Text;
