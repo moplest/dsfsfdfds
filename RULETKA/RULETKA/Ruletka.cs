@@ -74,6 +74,7 @@ namespace RULETKA
                 return;
             }
             Login.LoginInstance.Show();
+            player.cardMoney += player.cash4play;
         }
         public Label InitializeChipClone(int number)
         {
@@ -288,6 +289,7 @@ namespace RULETKA
         {
 
         }
+
         private void restartGame()
         {
             lblLastWin.Text = lblWin.Text;

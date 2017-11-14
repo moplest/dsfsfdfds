@@ -18,45 +18,57 @@ namespace RULETKA
         public string currency;
         public Login()
         {
-            LoginInstance = this;
+            LoginInstance = this;        
             InitializeComponent();
+            tbPassword.Text = "";
+            tbPassword.PasswordChar = '*';
+            tbPassword.MaxLength = 10;
         }
         private void LoginButton_Click(object sender, EventArgs e)
         {
+
             double cash = double.Parse(tbInputMoney.Text);
             p = pc.getPlayerByName(tbUser.Text);
             currency = cbCurrancy.Text;
             if (p != null)
             {
-                if (p.password == "1234")
+                if (p.password == tbPassword.Text)
                 {
-                    if (cash >= 100 && cash <= p.cardMoney)
+                    if (currency != "")
                     {
-                        p.cash4play = cash;
-                        p.cardMoney -= cash;
-                        lblError.Text = "";
-                        this.Hide();
-                        var ruletkaForm = new Ruletka();
-                        ruletkaForm.Show();
-                    }
-                    else
-                    {
-                        lblError.Text = "An error has occured! The selected cash4play \namount is ";
-                        if (cash < 100)
+                        if (cash >= 100 && cash <= p.cardMoney)
                         {
-                            lblError.Text += "below the minimum!";
+                            p.cash4play = cash;
+                            p.cardMoney -= cash;
+                            lblError.Text = "";
+                            this.Hide();
+                            var ruletkaForm = new Ruletka();
+                            ruletkaForm.Show();
                         }
                         else
                         {
-                            lblError.Text += "more than the money you have in your card!";
+                            lblError.Text = "An error has occured! The selected cash4play \namount is ";
+                            if (cash < 100)
+                            {
+                                lblError.Text += "below the minimum!";
+                            }
+                            else
+                            {
+                                lblError.Text += "more than the money you have in your card!";
+                            }
                         }
                     }
+                   else  lblError.Text = "Please select currency ! ";
                 }
+                    else
+                    {
+                        lblError.Text = "Wrong password please try again !";
+                    }
             }
             else
             {
                 lblError.Text = "Invalid username! Please try again.";
-            }
+            }           
         }
         private void ExitButton_Click(object sender, EventArgs e)
         {

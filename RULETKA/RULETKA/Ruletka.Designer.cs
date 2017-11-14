@@ -102,6 +102,7 @@
             this.lblHelp = new System.Windows.Forms.Label();
             this.lblCurrency = new System.Windows.Forms.Label();
             this.lblTestRestart = new System.Windows.Forms.Label();
+            this.tmPicture = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbRedLine)).BeginInit();
             this.SuspendLayout();
             // 
@@ -847,6 +848,9 @@
             this.lblTestRestart.Text = "Restart Test";
             this.lblTestRestart.Click += new System.EventHandler(this.lblTestRestart_Click);
             // 
+            // tmPicture
+            // 
+            // 
             // Ruletka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1013,6 +1017,7 @@
         private System.Windows.Forms.Label lblHelp;
         private System.Windows.Forms.Label lblCurrency;
         private System.Windows.Forms.Label lblTestRestart;
+        private System.Windows.Forms.Timer tmPicture;
     }
 }
 
