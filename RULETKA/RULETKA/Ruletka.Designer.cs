@@ -91,18 +91,30 @@
             this.lblBet = new System.Windows.Forms.Label();
             this.lblWin = new System.Windows.Forms.Label();
             this.lblPlayerName = new System.Windows.Forms.Label();
-            this.MaxWin = new System.Windows.Forms.Label();
+            this.lblMaxWin = new System.Windows.Forms.Label();
             this.lblText = new System.Windows.Forms.Label();
             this.pbRedLine = new System.Windows.Forms.PictureBox();
             this.tm = new System.Windows.Forms.Timer(this.components);
             this.lblLastBet = new System.Windows.Forms.Label();
             this.lblLastWin = new System.Windows.Forms.Label();
             this.lblRollNumber = new System.Windows.Forms.Label();
-            this.lblWinningNumber = new System.Windows.Forms.Label();
+            this.lwn0 = new System.Windows.Forms.Label();
             this.lblHelp = new System.Windows.Forms.Label();
             this.lblCurrency = new System.Windows.Forms.Label();
             this.lblTestRestart = new System.Windows.Forms.Label();
             this.tmPicture = new System.Windows.Forms.Timer(this.components);
+            this.lblCancelBet = new System.Windows.Forms.Label();
+            this.lwn1 = new System.Windows.Forms.Label();
+            this.lwn2 = new System.Windows.Forms.Label();
+            this.lwn3 = new System.Windows.Forms.Label();
+            this.lwn5 = new System.Windows.Forms.Label();
+            this.lwn4 = new System.Windows.Forms.Label();
+            this.lwn6 = new System.Windows.Forms.Label();
+            this.lwn7 = new System.Windows.Forms.Label();
+            this.lwn8 = new System.Windows.Forms.Label();
+            this.lwn9 = new System.Windows.Forms.Label();
+            this.lwn10 = new System.Windows.Forms.Label();
+            this.lwn11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbRedLine)).BeginInit();
             this.SuspendLayout();
             // 
@@ -747,16 +759,16 @@
             this.lblPlayerName.TabIndex = 61;
             this.lblPlayerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MaxWin
+            // lblMaxWin
             // 
-            this.MaxWin.BackColor = System.Drawing.Color.Transparent;
-            this.MaxWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxWin.ForeColor = System.Drawing.SystemColors.Control;
-            this.MaxWin.Location = new System.Drawing.Point(1034, 9);
-            this.MaxWin.Name = "MaxWin";
-            this.MaxWin.Size = new System.Drawing.Size(192, 43);
-            this.MaxWin.TabIndex = 62;
-            this.MaxWin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblMaxWin.BackColor = System.Drawing.Color.Transparent;
+            this.lblMaxWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxWin.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblMaxWin.Location = new System.Drawing.Point(1034, 9);
+            this.lblMaxWin.Name = "lblMaxWin";
+            this.lblMaxWin.Size = new System.Drawing.Size(192, 43);
+            this.lblMaxWin.TabIndex = 62;
+            this.lblMaxWin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblText
             // 
@@ -815,13 +827,13 @@
             this.lblRollNumber.TabIndex = 67;
             this.lblRollNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblWinningNumber
+            // lwn0
             // 
-            this.lblWinningNumber.BackColor = System.Drawing.Color.Transparent;
-            this.lblWinningNumber.Location = new System.Drawing.Point(411, 11);
-            this.lblWinningNumber.Name = "lblWinningNumber";
-            this.lblWinningNumber.Size = new System.Drawing.Size(60, 62);
-            this.lblWinningNumber.TabIndex = 68;
+            this.lwn0.BackColor = System.Drawing.Color.Transparent;
+            this.lwn0.Location = new System.Drawing.Point(411, 11);
+            this.lwn0.Name = "lwn0";
+            this.lwn0.Size = new System.Drawing.Size(60, 62);
+            this.lwn0.TabIndex = 68;
             // 
             // lblHelp
             // 
@@ -856,6 +868,114 @@
             this.tmPicture.Interval = 184;
             this.tmPicture.Tick += new System.EventHandler(this.tmPicture_Tick);
             // 
+            // lblCancelBet
+            // 
+            this.lblCancelBet.BackColor = System.Drawing.Color.Transparent;
+            this.lblCancelBet.Location = new System.Drawing.Point(49, 567);
+            this.lblCancelBet.Name = "lblCancelBet";
+            this.lblCancelBet.Size = new System.Drawing.Size(97, 93);
+            this.lblCancelBet.TabIndex = 72;
+            this.lblCancelBet.Click += new System.EventHandler(this.lblCancelBet_Click);
+            // 
+            // lwn1
+            // 
+            this.lwn1.BackColor = System.Drawing.Color.Transparent;
+            this.lwn1.Location = new System.Drawing.Point(492, 13);
+            this.lwn1.Name = "lwn1";
+            this.lwn1.Size = new System.Drawing.Size(27, 29);
+            this.lwn1.TabIndex = 73;
+            this.lwn1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lwn2
+            // 
+            this.lwn2.BackColor = System.Drawing.Color.Transparent;
+            this.lwn2.Location = new System.Drawing.Point(522, 13);
+            this.lwn2.Name = "lwn2";
+            this.lwn2.Size = new System.Drawing.Size(27, 29);
+            this.lwn2.TabIndex = 74;
+            this.lwn2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lwn3
+            // 
+            this.lwn3.BackColor = System.Drawing.Color.Transparent;
+            this.lwn3.Location = new System.Drawing.Point(553, 13);
+            this.lwn3.Name = "lwn3";
+            this.lwn3.Size = new System.Drawing.Size(27, 29);
+            this.lwn3.TabIndex = 75;
+            this.lwn3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lwn5
+            // 
+            this.lwn5.BackColor = System.Drawing.Color.Transparent;
+            this.lwn5.Location = new System.Drawing.Point(614, 13);
+            this.lwn5.Name = "lwn5";
+            this.lwn5.Size = new System.Drawing.Size(27, 29);
+            this.lwn5.TabIndex = 76;
+            this.lwn5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lwn4
+            // 
+            this.lwn4.BackColor = System.Drawing.Color.Transparent;
+            this.lwn4.Location = new System.Drawing.Point(584, 13);
+            this.lwn4.Name = "lwn4";
+            this.lwn4.Size = new System.Drawing.Size(27, 29);
+            this.lwn4.TabIndex = 77;
+            this.lwn4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lwn6
+            // 
+            this.lwn6.BackColor = System.Drawing.Color.Transparent;
+            this.lwn6.Location = new System.Drawing.Point(645, 13);
+            this.lwn6.Name = "lwn6";
+            this.lwn6.Size = new System.Drawing.Size(27, 29);
+            this.lwn6.TabIndex = 78;
+            this.lwn6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lwn7
+            // 
+            this.lwn7.BackColor = System.Drawing.Color.Transparent;
+            this.lwn7.Location = new System.Drawing.Point(676, 13);
+            this.lwn7.Name = "lwn7";
+            this.lwn7.Size = new System.Drawing.Size(27, 29);
+            this.lwn7.TabIndex = 79;
+            this.lwn7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lwn8
+            // 
+            this.lwn8.BackColor = System.Drawing.Color.Transparent;
+            this.lwn8.Location = new System.Drawing.Point(707, 13);
+            this.lwn8.Name = "lwn8";
+            this.lwn8.Size = new System.Drawing.Size(27, 29);
+            this.lwn8.TabIndex = 80;
+            this.lwn8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lwn9
+            // 
+            this.lwn9.BackColor = System.Drawing.Color.Transparent;
+            this.lwn9.Location = new System.Drawing.Point(738, 13);
+            this.lwn9.Name = "lwn9";
+            this.lwn9.Size = new System.Drawing.Size(27, 29);
+            this.lwn9.TabIndex = 81;
+            this.lwn9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lwn10
+            // 
+            this.lwn10.BackColor = System.Drawing.Color.Transparent;
+            this.lwn10.Location = new System.Drawing.Point(769, 13);
+            this.lwn10.Name = "lwn10";
+            this.lwn10.Size = new System.Drawing.Size(27, 29);
+            this.lwn10.TabIndex = 82;
+            this.lwn10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lwn11
+            // 
+            this.lwn11.BackColor = System.Drawing.Color.Transparent;
+            this.lwn11.Location = new System.Drawing.Point(798, 13);
+            this.lwn11.Name = "lwn11";
+            this.lwn11.Size = new System.Drawing.Size(27, 29);
+            this.lwn11.TabIndex = 83;
+            this.lwn11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Ruletka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -863,16 +983,28 @@
             this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lwn11);
+            this.Controls.Add(this.lwn10);
+            this.Controls.Add(this.lwn9);
+            this.Controls.Add(this.lwn8);
+            this.Controls.Add(this.lwn7);
+            this.Controls.Add(this.lwn6);
+            this.Controls.Add(this.lwn4);
+            this.Controls.Add(this.lwn5);
+            this.Controls.Add(this.lwn3);
+            this.Controls.Add(this.lwn2);
+            this.Controls.Add(this.lwn1);
+            this.Controls.Add(this.lblCancelBet);
             this.Controls.Add(this.lblTestRestart);
             this.Controls.Add(this.lblCurrency);
             this.Controls.Add(this.lblHelp);
-            this.Controls.Add(this.lblWinningNumber);
+            this.Controls.Add(this.lwn0);
             this.Controls.Add(this.lblRollNumber);
             this.Controls.Add(this.lblLastWin);
             this.Controls.Add(this.lblLastBet);
             this.Controls.Add(this.pbRedLine);
             this.Controls.Add(this.lblText);
-            this.Controls.Add(this.MaxWin);
+            this.Controls.Add(this.lblMaxWin);
             this.Controls.Add(this.lblPlayerName);
             this.Controls.Add(this.lblWin);
             this.Controls.Add(this.lblBet);
@@ -1011,18 +1143,30 @@
         private System.Windows.Forms.Label lblBet;
         private System.Windows.Forms.Label lblWin;
         private System.Windows.Forms.Label lblPlayerName;
-        private System.Windows.Forms.Label MaxWin;
+        private System.Windows.Forms.Label lblMaxWin;
         private System.Windows.Forms.Label lblText;
         private System.Windows.Forms.PictureBox pbRedLine;
         private System.Windows.Forms.Timer tm;
         private System.Windows.Forms.Label lblLastBet;
         private System.Windows.Forms.Label lblLastWin;
         private System.Windows.Forms.Label lblRollNumber;
-        private System.Windows.Forms.Label lblWinningNumber;
+        private System.Windows.Forms.Label lwn0;
         private System.Windows.Forms.Label lblHelp;
         private System.Windows.Forms.Label lblCurrency;
         private System.Windows.Forms.Label lblTestRestart;
         private System.Windows.Forms.Timer tmPicture;
+        private System.Windows.Forms.Label lblCancelBet;
+        private System.Windows.Forms.Label lwn1;
+        private System.Windows.Forms.Label lwn2;
+        private System.Windows.Forms.Label lwn3;
+        private System.Windows.Forms.Label lwn5;
+        private System.Windows.Forms.Label lwn4;
+        private System.Windows.Forms.Label lwn6;
+        private System.Windows.Forms.Label lwn7;
+        private System.Windows.Forms.Label lwn8;
+        private System.Windows.Forms.Label lwn9;
+        private System.Windows.Forms.Label lwn10;
+        private System.Windows.Forms.Label lwn11;
     }
 }
 

@@ -20,20 +20,24 @@ namespace RULETKA
         private Label[] chipForNumber = new Label[37];
         private Label[] rouletteNumber = new Label[49];
         private Label[] chipForAmount = new Label[6];
+        private Label[] lastNumbers = new Label[12];
         private int[] redNumbers = { 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 };
         private int[] blackNumbers = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
         private int timeLeft = 60;
         private Random random = new Random();
         public Ruletka()
         {
-            InitializeComponent();         
-            lblBet.Text = "0";
-            lblWin.Text = "0";
-            pbRedLine.Width = 0;
+            InitializeComponent();
             player = loginForm.p;
             lblCurrency.Text = loginForm.currency;
             lblPlayerName.Text = player.username;
             lblCurrentCash.Text = player.cash4play.ToString();
+            lblBet.Text = "0";
+            lblWin.Text = "0";
+            lblMaxWin.Text = "0";
+            lblLastWin.Text = "0";
+            lblLastBet.Text = "0";
+            pbRedLine.Width = 0;
             for (int i = 0; i < IsItFirstClick.Length; i++)
             {
                 IsItFirstClick[i] = true;
@@ -52,7 +56,14 @@ namespace RULETKA
                 Label lbl = this.Controls.Find("ch" + (i + 1).ToString(), true).FirstOrDefault() as Label;
                 chipForAmount[i] = lbl;
             }
+            for (int i = 0; i < lastNumbers.Length; i++)
+            {       //lwn = last wining number
+                Label lbl = this.Controls.Find("lwn" + i.ToString(), true).FirstOrDefault() as Label;
+                lastNumbers[i] = lbl;
+            }
             addClickEvents();
+            tm.Start();
+            tmPicture.Start();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -261,7 +272,7 @@ namespace RULETKA
                         counter = 0;
                     }
                 }
-                MaxWin.Text = calculateMaxWin();
+                lblMaxWin.Text = calculateMaxWin();
             }
         }
         private string calculateMaxWin()
@@ -325,23 +336,45 @@ namespace RULETKA
         //********************TIMER*********************
         private void tm_Tick(object sender, EventArgs e)
         {
-            timeLeft--;
-            if (timeLeft < 5 && timeLeft > -5 )
-            {
-                    int randomNumber = random.Next(0, 36);
-                    lblRollNumber.Text = randomNumber.ToString();
-                
-            }
-            if (timeLeft < -1)
-            {
-                lblText.Text = "No More Bets";                  
-                // disable buttons;
-            }
-            else if (timeLeft <= 60 && timeLeft >= 20)
+            timeLeft--; //timer is set to 60 seconds at start
+            if (timeLeft == 60)
             {
                 lblText.Text = "Please Place Your Bets !!";
             }
-            else lblText.Text = "Last Bets !";
+            else if (timeLeft == 20)
+            {
+                lblText.Text = "Last Bets !";
+            }
+            else if (timeLeft == -1)
+            {
+                lblText.Text = "No More Bets";
+            }
+                        
+            if (timeLeft < 5 && timeLeft >= -5)
+            {
+                int randomNumber = random.Next(0, 36);
+                lblRollNumber.Text = randomNumber.ToString();
+            }
+            if (timeLeft == -5) //show results
+            {
+                lwn0.Text = lblRollNumber.Text;
+                newWiningNumber(int.Parse(lblRollNumber.Text));
+                lblWin.Text = calculateWin(int.Parse(lwn0.Text));
+            }
+            if (timeLeft== -10) //restart
+            {
+
+            }
+        }
+        private void newWiningNumber(int number)
+        {
+            for (int i = lastNumbers.Length - 1; i >= 0; i--)
+            {
+                if (lastNumbers[i].Text!=null)
+                {
+
+                }
+            }
         }
         private void tmPicture_Tick(object sender, EventArgs e)
         {
@@ -351,21 +384,52 @@ namespace RULETKA
             }
             pbRedLine.Width++;
         }
-
+        private string calculateWin(int winingNumber)
+        {
+            double win;
+            win = double.Parse(chipForNumber[winingNumber].Text) * 36;
+            return win.ToString();
+        }
         private void restartGame()
         {
-            lblLastWin.Text = lblWin.Text;
             player.cash4play += double.Parse(lblWin.Text);
+            lblCurrentCash.Text = player.cash4play.ToString();
+            lblLastWin.Text = lblWin.Text;
             lblWin.Text = "0";
-            MaxWin.Text = "";
             lblLastBet.Text = lblBet.Text;
+            lblRollNumber.Text = "";
+            timeLeft = 60;
+            pbRedLine.Width = 0;
+            removeAllChips(false);
+        }
+        private void removeAllChips(bool returnMoney)
+        {
+            double cash4return = 0;                
+            foreach (var c in chipForNumber)
+            {
+                if (returnMoney)
+                {
+                    cash4return += double.Parse(c.Text);
+                }
+                c.Text = "0";
+                c.Visible = false;
+            }
+            for (int i = 0; i < IsItFirstClick.Length; i++)
+            {
+                IsItFirstClick[i] = true;
+            }
+            player.cash4play += cash4return;
+            lblCurrentCash.Text = player.cash4play.ToString();
+            lblMaxWin.Text = "0";
             lblBet.Text = "0";
-            tm.Start();
-            tmPicture.Start();
         }
         private void lblTestRestart_Click(object sender, EventArgs e)
         {
             restartGame();
+        }
+        private void lblCancelBet_Click(object sender, EventArgs e)
+        {
+            removeAllChips(true);
         }
         private void n0_Click(object sender, EventArgs e)
         {
