@@ -332,7 +332,7 @@ namespace RULETKA
         }
         private void tmPicture_Tick(object sender, EventArgs e)
         {
-            if (pbRedLine.Width == 328)
+            if (pbRedLine.Width == 329)
             {
                 tmPicture.Stop();
             }
