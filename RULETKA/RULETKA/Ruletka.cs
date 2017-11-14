@@ -12,10 +12,10 @@ namespace RULETKA
 {
     public partial class Ruletka : Form
     {
-        private int count = 0;
         private double chipAmount = 1;
         private Login loginForm = Login.LoginInstance;
         private Player player;
+        private bool canBetOnNumber = false;
         private bool[] IsItFirstClick = new bool[37];
         private Label[] chipForNumber = new Label[37];
         private Label[] rouletteNumber = new Label[49];
@@ -24,12 +24,10 @@ namespace RULETKA
         private int[] blackNumbers = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
         public Ruletka()
         {
-            InitializeComponent();
-            tmPicture.Start(); // Start the timer
-            tm.Start();           
-            pbRedLine.Width = 0;
+            InitializeComponent();         
             lblBet.Text = "0";
             lblWin.Text = "0";
+            pbRedLine.Width = 0;
             player = loginForm.p;
             lblCurrency.Text = loginForm.currency;
             lblPlayerName.Text = player.username;
@@ -108,41 +106,66 @@ namespace RULETKA
         }
         private void clickANumber(Label lbl, int lblNo)
         {
-            if (IsItFirstClick[lblNo])
+            chipForNumber[lblNo].Text = bet(chipForNumber[lblNo]).ToString();
+            if (IsItFirstClick[lblNo] && canBetOnNumber)
             {
                 chipForNumber[lblNo].Visible = true;
                 chipForNumber[lblNo].BringToFront();
                 chipForNumber[lblNo].Location = putNewChipLocation(chipForNumber[lblNo], lbl);
                 IsItFirstClick[lblNo] = false;
             }
-            chipForNumber[lblNo].Text = bet(chipForNumber[lblNo]).ToString();
+            canBetOnNumber = false;
+        }
+        private double bet(Label lbl)
+        {
+            double currentBet = double.Parse(lbl.Text);
+            double newBet = currentBet;
+            double betNow = double.Parse(lblBet.Text);
+            if (chipAmount <= player.cash4play)
+            {
+                betNow += chipAmount;
+                newBet = currentBet + chipAmount;
+                lblBet.Text = betNow.ToString();
+                player.cash4play -= chipAmount;
+                lblCurrentCash.Text = player.cash4play.ToString();
+                canBetOnNumber = true;
+            }
+            return newBet;
         }
         private void bettingSystemLogic(Label lbl)
         {
+            int counter = 0;
+            List<Label> theseNumbers = new List<Label>();
             int lblNo = int.Parse(lbl.Name.Substring(1));
+            bool needed = false;
             if (lblNo < 37)
             {
+                needed = false;
                 clickANumber(lbl, lblNo);
             }
             else if (lblNo > 36 && lblNo < 40)
             {
+                needed = true;
                 for (int i = 1; i < 37; i++)
                 {
                     if (lbl.Location.Y == rouletteNumber[i].Location.Y)
                     {
-                        clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                        counter++;
+                        theseNumbers.Add(rouletteNumber[i]);
                     }
                 }
             }
             else
             {
+                needed = true;
                 switch (lblNo)
                 {
                     case 40:
                         {
                             for (int i = 19; i < 37; i++)
                             {
-                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                                counter++;
+                                theseNumbers.Add(rouletteNumber[i]);
                             }
                         }
                         break;
@@ -150,7 +173,8 @@ namespace RULETKA
                         {
                             for (int i = 1; i < 37; i += 2)
                             {
-                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                                counter++;
+                                theseNumbers.Add(rouletteNumber[i]);
                             }
                         }
                         break;
@@ -158,7 +182,9 @@ namespace RULETKA
                         {
                             for (int i = 0; i < blackNumbers.Length; i++)
                             {
-                                clickANumber(rouletteNumber[blackNumbers[i]], blackNumbers[i]);
+                                counter++;
+                                theseNumbers.Add(rouletteNumber[blackNumbers[i]]);
+                                //clickANumber(rouletteNumber[blackNumbers[i]], blackNumbers[i]);
                             }
                         }
                         break;
@@ -166,7 +192,9 @@ namespace RULETKA
                         {
                             for (int i = 0; i < redNumbers.Length; i++)
                             {
-                                clickANumber(rouletteNumber[redNumbers[i]], redNumbers[i]);
+                                counter++;
+                                theseNumbers.Add(rouletteNumber[redNumbers[i]]);
+                                //clickANumber(rouletteNumber[redNumbers[i]], redNumbers[i]);
                             }
                         }
                         break;
@@ -174,7 +202,8 @@ namespace RULETKA
                         {
                             for (int i = 2; i < 37; i += 2)
                             {
-                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                                counter++;
+                                theseNumbers.Add(rouletteNumber[i]);
                             }
                         }
                         break;
@@ -182,7 +211,8 @@ namespace RULETKA
                         {
                             for (int i = 1; i < 19; i++)
                             {
-                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                                counter++;
+                                theseNumbers.Add(rouletteNumber[i]);
                             }
                         }
                         break;
@@ -190,7 +220,8 @@ namespace RULETKA
                         {
                             for (int i = 1; i < 13; i++)
                             {
-                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                                counter++;
+                                theseNumbers.Add(rouletteNumber[i]);
                             }
                         }
                         break;
@@ -198,7 +229,8 @@ namespace RULETKA
                         {
                             for (int i = 13; i < 25; i++)
                             {
-                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                                counter++;
+                                theseNumbers.Add(rouletteNumber[i]);
                             }
                         }
                         break;
@@ -206,12 +238,25 @@ namespace RULETKA
                         {
                             for (int i = 25; i < 37; i++)
                             {
-                                clickANumber(rouletteNumber[i], int.Parse(rouletteNumber[i].Name.Substring(1)));
+                                counter++;
+                                theseNumbers.Add(rouletteNumber[i]);
                             }
                         }
                         break;
                 } //end switch
             }            //end else
+            if (needed)
+            {
+                if (counter * chipAmount <= player.cash4play)
+                {
+                    foreach (var n in theseNumbers)
+                    {
+                        clickANumber(n, int.Parse(n.Name.Substring(1)));
+                    }
+                    theseNumbers.Clear();
+                    counter = 0;
+                }
+            }
             MaxWin.Text = calculateMaxWin();
         }
         private string calculateMaxWin()
@@ -272,31 +317,10 @@ namespace RULETKA
                     break;
             }
         }
-        private double bet(Label lbl)
-        {
-            double currentCash = double.Parse(lblCurrentCash.Text);
-            double currentBet = double.Parse(lbl.Text);
-            double newBet = currentBet;
-            double betNow = double.Parse(lblBet.Text);
-            if (chipAmount <= currentCash)
-            {
-                betNow += chipAmount;
-                newBet = currentBet + chipAmount;
-                lblBet.Text = betNow.ToString();
-                currentCash -= chipAmount;
-                lblCurrentCash.Text = currentCash.ToString();
-            }
-            return newBet;
-        }
         //********************TIMER*********************
         private void tm_Tick(object sender, EventArgs e)
         {
-            count++;
-            if (count == 175)
-            {
-                lblText.Text = "Time is out";
-                tm.Stop();
-            }
+ 
         }
         private void tmPicture_Tick(object sender, EventArgs e)
         {
