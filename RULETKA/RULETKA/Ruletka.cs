@@ -12,6 +12,7 @@ namespace RULETKA
 {
     public partial class Ruletka : Form
     {
+        private int count = 0;
         private double chipAmount = 1;
         private Login loginForm = Login.LoginInstance;
         private Player player;
@@ -24,6 +25,9 @@ namespace RULETKA
         public Ruletka()
         {
             InitializeComponent();
+            tmPicture.Start(); // Start the timer
+            tm.Start();           
+            pbRedLine.Width = 0;
             lblBet.Text = "0";
             lblWin.Text = "0";
             player = loginForm.p;
@@ -97,10 +101,10 @@ namespace RULETKA
         }
         private Point putNewChipLocation(Label chip, Label lbl)
         {
-            Point pnt = new System.Drawing.Point(
+              Point pnt = new System.Drawing.Point(
                 (lbl.Location.X + (lbl.Width / 2) - (chip.Width / 2)),
                 (lbl.Location.Y + (lbl.Height / 2) - (chip.Width / 2)));
-            return pnt;
+              return pnt;
         }
         private void clickANumber(Label lbl, int lblNo)
         {
@@ -287,9 +291,17 @@ namespace RULETKA
         //********************TIMER*********************
         private void tm_Tick(object sender, EventArgs e)
         {
-
+            count++;
+            if (count == 175)
+            {
+                lblText.Text = "Time is out";
+                tm.Stop();
+            }
         }
-
+        private void tmPicture_Tick(object sender, EventArgs e)
+        {
+            pbRedLine.Width++;
+        }
         private void restartGame()
         {
             lblLastWin.Text = lblWin.Text;

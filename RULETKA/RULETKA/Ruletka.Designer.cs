@@ -775,13 +775,12 @@
             this.pbRedLine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbRedLine.Location = new System.Drawing.Point(494, 59);
             this.pbRedLine.Name = "pbRedLine";
-            this.pbRedLine.Size = new System.Drawing.Size(100, 16);
+            this.pbRedLine.Size = new System.Drawing.Size(78, 16);
             this.pbRedLine.TabIndex = 64;
             this.pbRedLine.TabStop = false;
             // 
             // tm
             // 
-            this.tm.Interval = 80;
             this.tm.Tick += new System.EventHandler(this.tm_Tick);
             // 
             // lblLastBet
@@ -850,6 +849,7 @@
             // 
             // tmPicture
             // 
+            this.tmPicture.Tick += new System.EventHandler(this.tmPicture_Tick);
             // 
             // Ruletka
             // 
