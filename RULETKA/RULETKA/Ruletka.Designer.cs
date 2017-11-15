@@ -793,7 +793,7 @@
             // 
             // tm
             // 
-            this.tm.Interval = 500;
+            this.tm.Interval = 1000;
             this.tm.Tick += new System.EventHandler(this.tm_Tick);
             // 
             // lblLastBet
@@ -819,7 +819,7 @@
             // lblRollNumber
             // 
             this.lblRollNumber.BackColor = System.Drawing.Color.Transparent;
-            this.lblRollNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRollNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblRollNumber.ForeColor = System.Drawing.SystemColors.Control;
             this.lblRollNumber.Location = new System.Drawing.Point(845, 10);
             this.lblRollNumber.Name = "lblRollNumber";
@@ -830,10 +830,13 @@
             // lwn0
             // 
             this.lwn0.BackColor = System.Drawing.Color.Transparent;
+            this.lwn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn0.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn0.Location = new System.Drawing.Point(411, 11);
             this.lwn0.Name = "lwn0";
             this.lwn0.Size = new System.Drawing.Size(60, 62);
             this.lwn0.TabIndex = 68;
+            this.lwn0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblHelp
             // 
@@ -880,6 +883,8 @@
             // lwn1
             // 
             this.lwn1.BackColor = System.Drawing.Color.Transparent;
+            this.lwn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn1.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn1.Location = new System.Drawing.Point(492, 13);
             this.lwn1.Name = "lwn1";
             this.lwn1.Size = new System.Drawing.Size(27, 29);
@@ -889,6 +894,8 @@
             // lwn2
             // 
             this.lwn2.BackColor = System.Drawing.Color.Transparent;
+            this.lwn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn2.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn2.Location = new System.Drawing.Point(522, 13);
             this.lwn2.Name = "lwn2";
             this.lwn2.Size = new System.Drawing.Size(27, 29);
@@ -898,6 +905,8 @@
             // lwn3
             // 
             this.lwn3.BackColor = System.Drawing.Color.Transparent;
+            this.lwn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn3.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn3.Location = new System.Drawing.Point(553, 13);
             this.lwn3.Name = "lwn3";
             this.lwn3.Size = new System.Drawing.Size(27, 29);
@@ -907,6 +916,8 @@
             // lwn5
             // 
             this.lwn5.BackColor = System.Drawing.Color.Transparent;
+            this.lwn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn5.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn5.Location = new System.Drawing.Point(614, 13);
             this.lwn5.Name = "lwn5";
             this.lwn5.Size = new System.Drawing.Size(27, 29);
@@ -916,6 +927,8 @@
             // lwn4
             // 
             this.lwn4.BackColor = System.Drawing.Color.Transparent;
+            this.lwn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn4.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn4.Location = new System.Drawing.Point(584, 13);
             this.lwn4.Name = "lwn4";
             this.lwn4.Size = new System.Drawing.Size(27, 29);
@@ -925,6 +938,8 @@
             // lwn6
             // 
             this.lwn6.BackColor = System.Drawing.Color.Transparent;
+            this.lwn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn6.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn6.Location = new System.Drawing.Point(645, 13);
             this.lwn6.Name = "lwn6";
             this.lwn6.Size = new System.Drawing.Size(27, 29);
@@ -934,6 +949,8 @@
             // lwn7
             // 
             this.lwn7.BackColor = System.Drawing.Color.Transparent;
+            this.lwn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn7.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn7.Location = new System.Drawing.Point(676, 13);
             this.lwn7.Name = "lwn7";
             this.lwn7.Size = new System.Drawing.Size(27, 29);
@@ -943,6 +960,8 @@
             // lwn8
             // 
             this.lwn8.BackColor = System.Drawing.Color.Transparent;
+            this.lwn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn8.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn8.Location = new System.Drawing.Point(707, 13);
             this.lwn8.Name = "lwn8";
             this.lwn8.Size = new System.Drawing.Size(27, 29);
@@ -952,6 +971,8 @@
             // lwn9
             // 
             this.lwn9.BackColor = System.Drawing.Color.Transparent;
+            this.lwn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn9.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn9.Location = new System.Drawing.Point(738, 13);
             this.lwn9.Name = "lwn9";
             this.lwn9.Size = new System.Drawing.Size(27, 29);
@@ -961,6 +982,8 @@
             // lwn10
             // 
             this.lwn10.BackColor = System.Drawing.Color.Transparent;
+            this.lwn10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn10.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn10.Location = new System.Drawing.Point(769, 13);
             this.lwn10.Name = "lwn10";
             this.lwn10.Size = new System.Drawing.Size(27, 29);
@@ -970,6 +993,8 @@
             // lwn11
             // 
             this.lwn11.BackColor = System.Drawing.Color.Transparent;
+            this.lwn11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lwn11.ForeColor = System.Drawing.SystemColors.Control;
             this.lwn11.Location = new System.Drawing.Point(798, 13);
             this.lwn11.Name = "lwn11";
             this.lwn11.Size = new System.Drawing.Size(27, 29);
@@ -1169,4 +1194,3 @@
         private System.Windows.Forms.Label lwn11;
     }
 }
-

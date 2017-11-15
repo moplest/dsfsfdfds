@@ -106,7 +106,6 @@ namespace RULETKA
             pb.TabIndex = 2;
             pb.TabStop = false;
             this.Controls.Add(pb);
-            //pb.BringToFront();
             pb.Visible = false;
             return pb;
         }
@@ -199,7 +198,6 @@ namespace RULETKA
                                 {
                                     counter++;
                                     theseNumbers.Add(rouletteNumber[blackNumbers[i]]);
-                                    //clickANumber(rouletteNumber[blackNumbers[i]], blackNumbers[i]);
                                 }
                             }
                             break;
@@ -209,7 +207,6 @@ namespace RULETKA
                                 {
                                     counter++;
                                     theseNumbers.Add(rouletteNumber[redNumbers[i]]);
-                                    //clickANumber(rouletteNumber[redNumbers[i]], redNumbers[i]);
                                 }
                             }
                             break;
@@ -336,7 +333,7 @@ namespace RULETKA
         //********************TIMER*********************
         private void tm_Tick(object sender, EventArgs e)
         {
-            timeLeft--; //timer is set to 60 seconds at start
+            //timer is set to 60 seconds at start
             if (timeLeft == 60)
             {
                 lblText.Text = "Please Place Your Bets !!";
@@ -354,25 +351,58 @@ namespace RULETKA
             {
                 int randomNumber = random.Next(0, 36);
                 lblRollNumber.Text = randomNumber.ToString();
+                fontAndColor(lblRollNumber);
             }
             if (timeLeft == -5) //show results
             {
-                lwn0.Text = lblRollNumber.Text;
-                newWiningNumber(int.Parse(lblRollNumber.Text));
+                newWiningNumber(lblRollNumber.Text);
                 lblWin.Text = calculateWin(int.Parse(lwn0.Text));
             }
+            timeLeft--;
             if (timeLeft== -10) //restart
             {
-
-            }
+                restartGame();
+            }            
         }
-        private void newWiningNumber(int number)
+        private void newWiningNumber(string number)
         {
-            for (int i = lastNumbers.Length - 1; i >= 0; i--)
+            for (int i = lastNumbers.Length - 1; i > 0; i--)
             {
-                if (lastNumbers[i].Text!=null)
+                lastNumbers[i].Text = lastNumbers[i - 1].Text;
+                fontAndColor(lastNumbers[i]);
+            }
+            lastNumbers[0].Text = number;
+            fontAndColor(lastNumbers[0]);
+        }
+        private void fontAndColor(Label lbl)
+        {
+            if (lbl.Text != "")
+            {
+                if (int.Parse(lbl.Text)==0)
                 {
-
+                    lbl.BackColor = Color.Green;
+                    lbl.ForeColor = Color.White;
+                    return;
+                }
+                bool blackFlag = false;
+                int i = 0;
+                while (i < blackNumbers.Length && !blackFlag)
+                {
+                    if (blackNumbers[i] == int.Parse(lbl.Text))
+                    {
+                        blackFlag = true;
+                    }
+                    i++;
+                }
+                if (blackFlag)
+                {
+                    lbl.BackColor = Color.Black;
+                    lbl.ForeColor = Color.White;
+                }
+                else
+                {
+                    lbl.BackColor = Color.Red;
+                    lbl.ForeColor = Color.Black;
                 }
             }
         }
@@ -398,8 +428,10 @@ namespace RULETKA
             lblWin.Text = "0";
             lblLastBet.Text = lblBet.Text;
             lblRollNumber.Text = "";
+            lblRollNumber.BackColor = Color.Black;
             timeLeft = 60;
             pbRedLine.Width = 0;
+            tmPicture.Start();
             removeAllChips(false);
         }
         private void removeAllChips(bool returnMoney)
