@@ -57,7 +57,7 @@
             this.lblError.BackColor = System.Drawing.Color.Transparent;
             this.lblError.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(53, 586);
+            this.lblError.Location = new System.Drawing.Point(53, 608);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(65, 15);
             this.lblError.TabIndex = 1;
@@ -100,6 +100,7 @@
             // 
             // ExitButton
             // 
+            this.ExitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ExitButton.Location = new System.Drawing.Point(233, 553);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(96, 30);
@@ -135,6 +136,7 @@
             // 
             // cbCurrancy
             // 
+            this.cbCurrancy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCurrancy.FormattingEnabled = true;
             this.cbCurrancy.Items.AddRange(new object[] {
             "BGN",
@@ -150,10 +152,12 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.LoginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::RULETKA.Properties.Resources.green_casino_background_23_21476341511;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.ExitButton;
             this.ClientSize = new System.Drawing.Size(424, 681);
             this.Controls.Add(this.cbCurrancy);
             this.Controls.Add(this.tbPassword);

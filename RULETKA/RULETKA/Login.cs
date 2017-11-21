@@ -25,7 +25,7 @@ namespace RULETKA
             tbPassword.MaxLength = 10;
             ///za testa
             tbPassword.Text = "1234";
-            cbCurrancy.Text = "BGN";
+            lblError.Text = "";
         }
         private void LoginButton_Click(object sender, EventArgs e)
         {

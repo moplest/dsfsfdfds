@@ -263,14 +263,13 @@ namespace RULETKA
                 lblText.Text = "No More Bets";
             }
                         
-            if (timeLeft < 5 && timeLeft >= -5)
+            if (timeLeft ==5)
             {
-                int randomNumber = random.Next(0, 36);
-                lblRollNumber.Text = randomNumber.ToString();
-                fontAndColor(lblRollNumber);
+                tmRandomNumber.Start();
             }
             if (timeLeft == -5) //show results
             {
+                tmRandomNumber.Stop();
                 newWiningNumber(lblRollNumber.Text);
                 lblWin.Text = calculateWin(int.Parse(lwn0.Text));
                 lblText.Text = lwn0.Text + " ";
@@ -292,6 +291,20 @@ namespace RULETKA
             {
                 restartGame();
             }            
+        }
+        private void tmRandomNumber_Tick(object sender, EventArgs e)
+        {
+            int randomNumber = random.Next(0, 36);
+            lblRollNumber.Text = randomNumber.ToString();
+            fontAndColor(lblRollNumber);
+            if (tmRandomNumber.Interval < 500)
+            {
+                tmRandomNumber.Interval += 10;
+            }
+            else
+            {
+                tmRandomNumber.Interval += 100;
+            }
         }
         private void newWiningNumber(string number)
         {

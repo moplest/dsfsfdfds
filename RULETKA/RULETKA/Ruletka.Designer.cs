@@ -115,6 +115,7 @@
             this.lwn9 = new System.Windows.Forms.Label();
             this.lwn10 = new System.Windows.Forms.Label();
             this.lwn11 = new System.Windows.Forms.Label();
+            this.tmRandomNumber = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbRedLine)).BeginInit();
             this.SuspendLayout();
             // 
@@ -793,7 +794,7 @@
             // 
             // tm
             // 
-            this.tm.Interval = 500;
+            this.tm.Interval = 1000;
             this.tm.Tick += new System.EventHandler(this.tm_Tick);
             // 
             // lblLastBet
@@ -849,7 +850,7 @@
             // lblCurrency
             // 
             this.lblCurrency.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrency.Font = new System.Drawing.Font("Wide Latin", 12F);
             this.lblCurrency.ForeColor = System.Drawing.SystemColors.Control;
             this.lblCurrency.Location = new System.Drawing.Point(25, 9);
             this.lblCurrency.Name = "lblCurrency";
@@ -1000,6 +1001,11 @@
             this.lwn11.Size = new System.Drawing.Size(27, 29);
             this.lwn11.TabIndex = 83;
             this.lwn11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tmRandomNumber
+            // 
+            this.tmRandomNumber.Interval = 50;
+            this.tmRandomNumber.Tick += new System.EventHandler(this.tmRandomNumber_Tick);
             // 
             // Ruletka
             // 
@@ -1192,5 +1198,6 @@
         private System.Windows.Forms.Label lwn9;
         private System.Windows.Forms.Label lwn10;
         private System.Windows.Forms.Label lwn11;
+        private System.Windows.Forms.Timer tmRandomNumber;
     }
 }
