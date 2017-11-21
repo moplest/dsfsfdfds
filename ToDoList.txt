@@ -1,6 +1,5 @@
 1. Font na labelite
-2. Limiti za zalog na chisla
-3. Preorazmerqvane na labelite s pechelivsho
+3. Preorazmerqvane na labelite
 4. Help button
-final. da se mahne restart butona
-* Serii
+5. redakcii po login formata; validaciq na danni
+* Serii - golqma,malka,orf,nulev

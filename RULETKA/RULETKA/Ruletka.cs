@@ -263,13 +263,14 @@ namespace RULETKA
                     int i = 0;
                     while (i < theseNumbers.Count && !flag)
                     {
-                        if (double.Parse(theseNumbers[i].Text) + chipAmount <= 200)
+                        if ((double.Parse(chipForNumber[int.Parse(theseNumbers[i].Name.Substring(1))].Text))
+                            + chipAmount > 200)
                         {
                             flag = true;
                         }
                         i++;
                     }
-                    if (counter * chipAmount <= player.cash4play && flag)
+                    if (counter * chipAmount <= player.cash4play && !flag)
                     {                      
                         foreach (var n in theseNumbers)
                         {
