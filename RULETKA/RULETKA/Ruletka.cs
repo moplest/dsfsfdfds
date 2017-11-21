@@ -133,7 +133,7 @@ namespace RULETKA
             double currentBet = double.Parse(lbl.Text);
             double newBet = currentBet;
             double betNow = double.Parse(lblBet.Text);
-            if (chipAmount <= player.cash4play)
+            if (chipAmount <= player.cash4play && newBet+chipAmount<=200)
             {
                 betNow += chipAmount;
                 newBet = currentBet + chipAmount;
@@ -259,8 +259,18 @@ namespace RULETKA
                 }            //end else
                 if (needed)
                 {
-                    if (counter * chipAmount <= player.cash4play)
+                    bool flag = false;
+                    int i = 0;
+                    while (i < theseNumbers.Count && !flag)
                     {
+                        if (double.Parse(theseNumbers[i].Text) + chipAmount <= 200)
+                        {
+                            flag = true;
+                        }
+                        i++;
+                    }
+                    if (counter * chipAmount <= player.cash4play && flag)
+                    {                      
                         foreach (var n in theseNumbers)
                         {
                             clickANumber(n, int.Parse(n.Name.Substring(1)));
@@ -357,6 +367,19 @@ namespace RULETKA
             {
                 newWiningNumber(lblRollNumber.Text);
                 lblWin.Text = calculateWin(int.Parse(lwn0.Text));
+                lblText.Text = lwn0.Text + " ";
+                if (lwn0.BackColor==Color.Black)
+                {
+                    lblText.Text += "Black";
+                }
+                else if (lwn0.BackColor==Color.Red)
+                {
+                    lblText.Text += "Red";
+                }
+                else
+                {
+                    lblText.Text += "Green";
+                }
             }
             timeLeft--;
             if (timeLeft== -10) //restart

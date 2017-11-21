@@ -793,7 +793,7 @@
             // 
             // tm
             // 
-            this.tm.Interval = 1000;
+            this.tm.Interval = 500;
             this.tm.Tick += new System.EventHandler(this.tm_Tick);
             // 
             // lblLastBet
@@ -821,9 +821,9 @@
             this.lblRollNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblRollNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblRollNumber.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRollNumber.Location = new System.Drawing.Point(845, 10);
+            this.lblRollNumber.Location = new System.Drawing.Point(847, 13);
             this.lblRollNumber.Name = "lblRollNumber";
-            this.lblRollNumber.Size = new System.Drawing.Size(63, 64);
+            this.lblRollNumber.Size = new System.Drawing.Size(58, 57);
             this.lblRollNumber.TabIndex = 67;
             this.lblRollNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -832,9 +832,9 @@
             this.lwn0.BackColor = System.Drawing.Color.Transparent;
             this.lwn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lwn0.ForeColor = System.Drawing.SystemColors.Control;
-            this.lwn0.Location = new System.Drawing.Point(411, 11);
+            this.lwn0.Location = new System.Drawing.Point(412, 13);
             this.lwn0.Name = "lwn0";
-            this.lwn0.Size = new System.Drawing.Size(60, 62);
+            this.lwn0.Size = new System.Drawing.Size(58, 57);
             this.lwn0.TabIndex = 68;
             this.lwn0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1005,7 +1005,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA4;
+            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.lwn11);
