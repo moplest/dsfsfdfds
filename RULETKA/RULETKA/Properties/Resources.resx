@@ -121,6 +121,9 @@
   <data name="goodChip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goodChip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RULETKATA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RULETKATA2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ego e" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ego e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,14 +136,14 @@
   <data name="goodChip2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goodChip2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RULETKATA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RULETKATA2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RULETKATA5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RULETKATA5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="redLine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redLine1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RULETKATA5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RULETKATA5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="green-casino-background_23-21476341511" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green-casino-background_23-21476341511.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="green-casino-background_23-2147634151" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\green-casino-background_23-2147634151.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,7 +166,7 @@
   <data name="THE CHIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\THE CHIP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="green-casino-background_23-21476341511" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\green-casino-background_23-21476341511.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RULETKATA6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RULETKATA6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -116,6 +116,11 @@
             this.lwn10 = new System.Windows.Forms.Label();
             this.lwn11 = new System.Windows.Forms.Label();
             this.tmRandomNumber = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbRedLine)).BeginInit();
             this.SuspendLayout();
             // 
@@ -719,7 +724,7 @@
             // lblCurrentCash
             // 
             this.lblCurrentCash.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurrentCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentCash.Font = new System.Drawing.Font("Baskerville Old Face", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentCash.ForeColor = System.Drawing.SystemColors.Control;
             this.lblCurrentCash.Location = new System.Drawing.Point(194, 9);
             this.lblCurrentCash.Name = "lblCurrentCash";
@@ -730,7 +735,7 @@
             // lblBet
             // 
             this.lblBet.BackColor = System.Drawing.Color.Transparent;
-            this.lblBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBet.Font = new System.Drawing.Font("Baskerville Old Face", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBet.ForeColor = System.Drawing.SystemColors.Control;
             this.lblBet.Location = new System.Drawing.Point(194, 52);
             this.lblBet.Name = "lblBet";
@@ -741,7 +746,7 @@
             // lblWin
             // 
             this.lblWin.BackColor = System.Drawing.Color.Transparent;
-            this.lblWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWin.Font = new System.Drawing.Font("Baskerville Old Face", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWin.ForeColor = System.Drawing.SystemColors.Control;
             this.lblWin.Location = new System.Drawing.Point(194, 104);
             this.lblWin.Name = "lblWin";
@@ -752,7 +757,7 @@
             // lblPlayerName
             // 
             this.lblPlayerName.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerName.Font = new System.Drawing.Font("Baskerville Old Face", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerName.ForeColor = System.Drawing.SystemColors.Control;
             this.lblPlayerName.Location = new System.Drawing.Point(100, 160);
             this.lblPlayerName.Name = "lblPlayerName";
@@ -763,18 +768,18 @@
             // lblMaxWin
             // 
             this.lblMaxWin.BackColor = System.Drawing.Color.Transparent;
-            this.lblMaxWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxWin.Font = new System.Drawing.Font("Baskerville Old Face", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaxWin.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMaxWin.Location = new System.Drawing.Point(1034, 9);
+            this.lblMaxWin.Location = new System.Drawing.Point(1070, 1);
             this.lblMaxWin.Name = "lblMaxWin";
-            this.lblMaxWin.Size = new System.Drawing.Size(192, 43);
+            this.lblMaxWin.Size = new System.Drawing.Size(156, 51);
             this.lblMaxWin.TabIndex = 62;
             this.lblMaxWin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblText
             // 
             this.lblText.BackColor = System.Drawing.Color.Transparent;
-            this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblText.Font = new System.Drawing.Font("Baskerville Old Face", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblText.ForeColor = System.Drawing.SystemColors.Control;
             this.lblText.Location = new System.Drawing.Point(16, 274);
             this.lblText.Name = "lblText";
@@ -800,6 +805,7 @@
             // lblLastBet
             // 
             this.lblLastBet.BackColor = System.Drawing.Color.Transparent;
+            this.lblLastBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastBet.ForeColor = System.Drawing.SystemColors.Control;
             this.lblLastBet.Location = new System.Drawing.Point(984, 52);
             this.lblLastBet.Name = "lblLastBet";
@@ -810,6 +816,7 @@
             // lblLastWin
             // 
             this.lblLastWin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLastWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastWin.ForeColor = System.Drawing.SystemColors.Control;
             this.lblLastWin.Location = new System.Drawing.Point(1148, 56);
             this.lblLastWin.Name = "lblLastWin";
@@ -850,11 +857,11 @@
             // lblCurrency
             // 
             this.lblCurrency.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurrency.Font = new System.Drawing.Font("Wide Latin", 12F);
-            this.lblCurrency.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCurrency.Location = new System.Drawing.Point(25, 9);
+            this.lblCurrency.Font = new System.Drawing.Font("Baskerville Old Face", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrency.ForeColor = System.Drawing.Color.White;
+            this.lblCurrency.Location = new System.Drawing.Point(23, 9);
             this.lblCurrency.Name = "lblCurrency";
-            this.lblCurrency.Size = new System.Drawing.Size(121, 43);
+            this.lblCurrency.Size = new System.Drawing.Size(114, 43);
             this.lblCurrency.TabIndex = 70;
             this.lblCurrency.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -1007,13 +1014,78 @@
             this.tmRandomNumber.Interval = 50;
             this.tmRandomNumber.Tick += new System.EventHandler(this.tmRandomNumber_Tick);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Baskerville Old Face", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(25, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 43);
+            this.label1.TabIndex = 84;
+            this.label1.Text = "BET";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Baskerville Old Face", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(25, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 43);
+            this.label2.TabIndex = 85;
+            this.label2.Text = "WIN";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(923, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 36);
+            this.label3.TabIndex = 86;
+            this.label3.Text = "MaxWin";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(923, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 23);
+            this.label4.TabIndex = 87;
+            this.label4.Text = "LastBet";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(1083, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 23);
+            this.label5.TabIndex = 88;
+            this.label5.Text = "LastWin";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Ruletka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA5;
+            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA6;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lwn11);
             this.Controls.Add(this.lwn10);
             this.Controls.Add(this.lwn9);
@@ -1199,5 +1271,10 @@
         private System.Windows.Forms.Label lwn10;
         private System.Windows.Forms.Label lwn11;
         private System.Windows.Forms.Timer tmRandomNumber;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
