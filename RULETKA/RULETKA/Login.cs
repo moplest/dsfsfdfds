@@ -30,7 +30,7 @@ namespace RULETKA
         private void LoginButton_Click(object sender, EventArgs e)
         {
 
-            double cash = double.Parse(tbInputMoney.Text);
+            int cash = int.Parse(tbInputMoney.Text);
             p = pc.getPlayerByName(tbUser.Text);
             currency = cbCurrancy.Text;
             if (p != null)
@@ -76,6 +76,20 @@ namespace RULETKA
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tbInputMoney_TextChanged(object sender, EventArgs e)
+        {
+            int parsedValue;
+            if (!int.TryParse(tbInputMoney.Text, out parsedValue))
+            {
+                lblError.Text = "Please enter numbers only!";
+                tbInputMoney.Text = "";
+            }
+            else
+            {
+                lblError.Text = "";
+            }
         }
     }
 }

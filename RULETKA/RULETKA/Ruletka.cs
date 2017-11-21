@@ -12,7 +12,7 @@ namespace RULETKA
 {
     public partial class Ruletka : Form
     {
-        private double chipAmount = 1;
+        private int chipAmount = 1;
         private Login loginForm = Login.LoginInstance;
         private Player player;
         private bool canBetOnNumber = false;
@@ -64,85 +64,6 @@ namespace RULETKA
             addClickEvents();
             tm.Start();
             tmPicture.Start();
-        }
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            goToLoginForm();
-        }
-        private void Ruletka_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void goToLoginForm()
-        {
-            Login.LoginInstance.Show();
-            player.cardMoney += player.cash4play;
-            this.Close();
-        }
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {//метод при който при натискане на "Х" 
-         //освен че затваря прозореца, ни отваря обратно логин формата
-            if (e.CloseReason == CloseReason.WindowsShutDown
-                || e.CloseReason == CloseReason.ApplicationExitCall
-                || e.CloseReason == CloseReason.TaskManagerClosing)
-            {
-                return;
-            }
-            Login.LoginInstance.Show();
-            player.cardMoney += player.cash4play;
-        }
-        public Label InitializeChipClone(int number)
-        {
-            Label pb = new Label();
-            // emptyChipPicture
-            pb.BackColor = System.Drawing.Color.Transparent;
-            pb.BackgroundImage = global::RULETKA.Properties.Resources.goodChip;
-            pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            pb.Size = new System.Drawing.Size(44, 44);
-            pb.Location = new Point(0, 0);
-            pb.Name = "ECP" + number.ToString();
-            pb.Text = "0";
-            pb.TextAlign = ContentAlignment.MiddleCenter;
-            pb.TabIndex = 2;
-            pb.TabStop = false;
-            this.Controls.Add(pb);
-            pb.Visible = false;
-            return pb;
-        }
-        private Point putNewChipLocation(Label chip, Label lbl)
-        {
-              Point pnt = new System.Drawing.Point(
-                (lbl.Location.X + (lbl.Width / 2) - (chip.Width / 2)),
-                (lbl.Location.Y + (lbl.Height / 2) - (chip.Width / 2)));
-              return pnt;
-        }
-        private void clickANumber(Label lbl, int lblNo)
-        {
-            chipForNumber[lblNo].Text = bet(chipForNumber[lblNo]).ToString();
-            if (IsItFirstClick[lblNo] && canBetOnNumber)
-            {
-                chipForNumber[lblNo].Visible = true;
-                chipForNumber[lblNo].BringToFront();
-                chipForNumber[lblNo].Location = putNewChipLocation(chipForNumber[lblNo], lbl);
-                IsItFirstClick[lblNo] = false;
-            }
-            canBetOnNumber = false;
-        }
-        private double bet(Label lbl)
-        {
-            double currentBet = double.Parse(lbl.Text);
-            double newBet = currentBet;
-            double betNow = double.Parse(lblBet.Text);
-            if (chipAmount <= player.cash4play && newBet+chipAmount<=200)
-            {
-                betNow += chipAmount;
-                newBet = currentBet + chipAmount;
-                lblBet.Text = betNow.ToString();
-                player.cash4play -= chipAmount;
-                lblCurrentCash.Text = player.cash4play.ToString();
-                canBetOnNumber = true;
-            }
-            return newBet;
         }
         private void bettingSystemLogic(Label lbl)
         {
@@ -263,7 +184,7 @@ namespace RULETKA
                     int i = 0;
                     while (i < theseNumbers.Count && !flag)
                     {
-                        if ((double.Parse(chipForNumber[int.Parse(theseNumbers[i].Name.Substring(1))].Text))
+                        if ((int.Parse(chipForNumber[int.Parse(theseNumbers[i].Name.Substring(1))].Text))
                             + chipAmount > 200)
                         {
                             flag = true;
@@ -283,12 +204,40 @@ namespace RULETKA
                 lblMaxWin.Text = calculateMaxWin();
             }
         }
+        private void clickANumber(Label lbl, int lblNo)
+        {
+            chipForNumber[lblNo].Text = bet(chipForNumber[lblNo]).ToString();
+            if (IsItFirstClick[lblNo] && canBetOnNumber)
+            {
+                chipForNumber[lblNo].Visible = true;
+                chipForNumber[lblNo].BringToFront();
+                chipForNumber[lblNo].Location = putNewChipLocation(chipForNumber[lblNo], lbl);
+                IsItFirstClick[lblNo] = false;
+            }
+            canBetOnNumber = false;
+        }
+        private int bet(Label lbl)
+        {
+            int currentBet = int.Parse(lbl.Text);
+            int newBet = currentBet;
+            int betNow = int.Parse(lblBet.Text);
+            if (chipAmount <= player.cash4play && newBet + chipAmount <= 200)
+            {
+                betNow += chipAmount;
+                newBet = currentBet + chipAmount;
+                lblBet.Text = betNow.ToString();
+                player.cash4play -= chipAmount;
+                lblCurrentCash.Text = player.cash4play.ToString();
+                canBetOnNumber = true;
+            }
+            return newBet;
+        }
         private string calculateMaxWin()
         {
-            double max = 0;
+            int max = 0;
             for (int i = 0; i < chipForNumber.Length; i++)
             {
-                double currentBetOnNumber = double.Parse(chipForNumber[i].Text);
+                int currentBetOnNumber = int.Parse(chipForNumber[i].Text);
                 if (currentBetOnNumber > max)
                 {
                     max = currentBetOnNumber;
@@ -296,50 +245,6 @@ namespace RULETKA
             }
             max *= 36;
             return max.ToString();
-        }
-        private void clickAChipForAmount(Label lbl)
-        {
-            int lblNo = int.Parse(lbl.Name.Substring(2));
-            lblChosenOne.Location = lbl.Location;
-            switch (lblNo)
-            {
-                case 1:
-                    {
-                        lblChosenOne.Text = "1";
-                        chipAmount = 1;
-                    }
-                    break;
-                case 2:
-                    {
-                        lblChosenOne.Text = "2";
-                        chipAmount = 2;
-                    }
-                    break;
-                case 3:
-                    {
-                        lblChosenOne.Text = "5";
-                        chipAmount = 5;
-                    }
-                    break;
-                case 4:
-                    {
-                        lblChosenOne.Text = "10";
-                        chipAmount = 10;
-                    }
-                    break;
-                case 5:
-                    {
-                        lblChosenOne.Text = "20";
-                        chipAmount = 20;
-                    }
-                    break;
-                case 6:
-                    {
-                        lblChosenOne.Text = "50";
-                        chipAmount = 50;
-                    }
-                    break;
-            }
         }
         //********************TIMER*********************
         private void tm_Tick(object sender, EventArgs e)
@@ -398,11 +303,77 @@ namespace RULETKA
             lastNumbers[0].Text = number;
             fontAndColor(lastNumbers[0]);
         }
+        private string calculateWin(int winingNumber)
+        {
+            int win;
+            win = int.Parse(chipForNumber[winingNumber].Text) * 36;
+            return win.ToString();
+        }
+        private void restartGame()
+        {
+            player.cash4play += int.Parse(lblWin.Text);
+            lblCurrentCash.Text = player.cash4play.ToString();
+            lblLastWin.Text = lblWin.Text;
+            lblWin.Text = "0";
+            lblLastBet.Text = lblBet.Text;
+            lblRollNumber.Text = "";
+            lblRollNumber.BackColor = Color.Black;
+            timeLeft = 60;
+            pbRedLine.Width = 0;
+            tmPicture.Start();
+            removeAllChips(false);
+        }
+        public Label InitializeChipClone(int number)
+        {
+            Label pb = new Label();
+            // emptyChipPicture
+            pb.BackColor = System.Drawing.Color.Transparent;
+            pb.BackgroundImage = global::RULETKA.Properties.Resources.goodChip;
+            pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            pb.Size = new System.Drawing.Size(44, 44);
+            pb.Location = new Point(0, 0);
+            pb.Name = "ECP" + number.ToString();
+            pb.Text = "0";
+            pb.TextAlign = ContentAlignment.MiddleCenter;
+            pb.TabIndex = 2;
+            pb.TabStop = false;
+            this.Controls.Add(pb);
+            pb.Visible = false;
+            return pb;
+        }
+        private Point putNewChipLocation(Label chip, Label lbl)
+        {
+            Point pnt = new System.Drawing.Point(
+              (lbl.Location.X + (lbl.Width / 2) - (chip.Width / 2)),
+              (lbl.Location.Y + (lbl.Height / 2) - (chip.Width / 2)));
+            return pnt;
+        }
+        private void removeAllChips(bool returnMoney)
+        {
+            int cash4return = 0;                
+            foreach (var c in chipForNumber)
+            {
+                if (returnMoney)
+                {
+                    cash4return += int.Parse(c.Text);
+                }
+                c.Text = "0";
+                c.Visible = false;
+            }
+            for (int i = 0; i < IsItFirstClick.Length; i++)
+            {
+                IsItFirstClick[i] = true;
+            }
+            player.cash4play += cash4return;
+            lblCurrentCash.Text = player.cash4play.ToString();
+            lblMaxWin.Text = "0";
+            lblBet.Text = "0";
+        }
         private void fontAndColor(Label lbl)
         {
             if (lbl.Text != "")
             {
-                if (int.Parse(lbl.Text)==0)
+                if (int.Parse(lbl.Text) == 0)
                 {
                     lbl.BackColor = Color.Green;
                     lbl.ForeColor = Color.White;
@@ -430,6 +401,50 @@ namespace RULETKA
                 }
             }
         }
+        private void clickAChipForAmount(Label lbl)
+        {
+            int lblNo = int.Parse(lbl.Name.Substring(2));
+            lblChosenOne.Location = lbl.Location;
+            switch (lblNo)
+            {
+                case 1:
+                    {
+                        lblChosenOne.Text = "1";
+                        chipAmount = 1;
+                    }
+                    break;
+                case 2:
+                    {
+                        lblChosenOne.Text = "2";
+                        chipAmount = 2;
+                    }
+                    break;
+                case 3:
+                    {
+                        lblChosenOne.Text = "5";
+                        chipAmount = 5;
+                    }
+                    break;
+                case 4:
+                    {
+                        lblChosenOne.Text = "10";
+                        chipAmount = 10;
+                    }
+                    break;
+                case 5:
+                    {
+                        lblChosenOne.Text = "20";
+                        chipAmount = 20;
+                    }
+                    break;
+                case 6:
+                    {
+                        lblChosenOne.Text = "50";
+                        chipAmount = 50;
+                    }
+                    break;
+            }
+        }
         private void tmPicture_Tick(object sender, EventArgs e)
         {
             if (pbRedLine.Width == 329)
@@ -438,46 +453,27 @@ namespace RULETKA
             }
             pbRedLine.Width++;
         }
-        private string calculateWin(int winingNumber)
+        private void goToLoginForm()
         {
-            double win;
-            win = double.Parse(chipForNumber[winingNumber].Text) * 36;
-            return win.ToString();
+            Login.LoginInstance.Show();
+            player.cardMoney += player.cash4play;
+            this.Close();
         }
-        private void restartGame()
-        {
-            player.cash4play += double.Parse(lblWin.Text);
-            lblCurrentCash.Text = player.cash4play.ToString();
-            lblLastWin.Text = lblWin.Text;
-            lblWin.Text = "0";
-            lblLastBet.Text = lblBet.Text;
-            lblRollNumber.Text = "";
-            lblRollNumber.BackColor = Color.Black;
-            timeLeft = 60;
-            pbRedLine.Width = 0;
-            tmPicture.Start();
-            removeAllChips(false);
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {//метод при който при натискане на "Х" 
+         //освен че затваря прозореца, ни отваря обратно логин формата
+            if (e.CloseReason == CloseReason.WindowsShutDown
+                || e.CloseReason == CloseReason.ApplicationExitCall
+                || e.CloseReason == CloseReason.TaskManagerClosing)
+            {
+                return;
+            }
+            Login.LoginInstance.Show();
+            player.cardMoney += player.cash4play;
         }
-        private void removeAllChips(bool returnMoney)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            double cash4return = 0;                
-            foreach (var c in chipForNumber)
-            {
-                if (returnMoney)
-                {
-                    cash4return += double.Parse(c.Text);
-                }
-                c.Text = "0";
-                c.Visible = false;
-            }
-            for (int i = 0; i < IsItFirstClick.Length; i++)
-            {
-                IsItFirstClick[i] = true;
-            }
-            player.cash4play += cash4return;
-            lblCurrentCash.Text = player.cash4play.ToString();
-            lblMaxWin.Text = "0";
-            lblBet.Text = "0";
+            goToLoginForm();
         }
         private void lblTestRestart_Click(object sender, EventArgs e)
         {
@@ -706,6 +702,10 @@ namespace RULETKA
         private void ch6_Click(object sender, EventArgs e)
         {
             clickAChipForAmount(ch6);
+        }
+        private void Ruletka_Load(object sender, EventArgs e)
+        {
+
         }
         private void addClickEvents()
         {

@@ -55,11 +55,11 @@
             // 
             this.lblError.AutoSize = true;
             this.lblError.BackColor = System.Drawing.Color.Transparent;
-            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblError.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(53, 586);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(59, 16);
+            this.lblError.Size = new System.Drawing.Size(65, 15);
             this.lblError.TabIndex = 1;
             this.lblError.Text = "lblError";
             // 
@@ -86,7 +86,8 @@
             this.tbInputMoney.Name = "tbInputMoney";
             this.tbInputMoney.Size = new System.Drawing.Size(163, 20);
             this.tbInputMoney.TabIndex = 4;
-            this.tbInputMoney.Text = "100.00";
+            this.tbInputMoney.Text = "100";
+            this.tbInputMoney.TextChanged += new System.EventHandler(this.tbInputMoney_TextChanged);
             // 
             // lblInputMoney
             // 
@@ -151,9 +152,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = global::RULETKA.Properties.Resources.green_casino_background_23_2147634151;
+            this.BackgroundImage = global::RULETKA.Properties.Resources.green_casino_background_23_21476341511;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(424, 611);
+            this.ClientSize = new System.Drawing.Size(424, 681);
             this.Controls.Add(this.cbCurrancy);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.label2);
@@ -166,8 +167,8 @@
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.LoginButton);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(440, 700);
-            this.MinimumSize = new System.Drawing.Size(440, 552);
+            this.MaximumSize = new System.Drawing.Size(440, 720);
+            this.MinimumSize = new System.Drawing.Size(440, 720);
             this.Name = "Login";
             this.Text = "Casino Roulette";
             this.ResumeLayout(false);
