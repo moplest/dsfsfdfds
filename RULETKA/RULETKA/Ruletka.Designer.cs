@@ -101,7 +101,6 @@
             this.lwn0 = new System.Windows.Forms.Label();
             this.lblHelp = new System.Windows.Forms.Label();
             this.lblCurrency = new System.Windows.Forms.Label();
-            this.lblTestRestart = new System.Windows.Forms.Label();
             this.tmPicture = new System.Windows.Forms.Timer(this.components);
             this.lblCancelBet = new System.Windows.Forms.Label();
             this.lwn1 = new System.Windows.Forms.Label();
@@ -818,9 +817,9 @@
             this.lblLastWin.BackColor = System.Drawing.Color.Transparent;
             this.lblLastWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastWin.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblLastWin.Location = new System.Drawing.Point(1148, 56);
+            this.lblLastWin.Location = new System.Drawing.Point(1157, 52);
             this.lblLastWin.Name = "lblLastWin";
-            this.lblLastWin.Size = new System.Drawing.Size(78, 19);
+            this.lblLastWin.Size = new System.Drawing.Size(69, 23);
             this.lblLastWin.TabIndex = 66;
             this.lblLastWin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -853,6 +852,7 @@
             this.lblHelp.Name = "lblHelp";
             this.lblHelp.Size = new System.Drawing.Size(81, 46);
             this.lblHelp.TabIndex = 69;
+            this.lblHelp.Click += new System.EventHandler(this.lblHelp_Click);
             // 
             // lblCurrency
             // 
@@ -864,15 +864,6 @@
             this.lblCurrency.Size = new System.Drawing.Size(114, 43);
             this.lblCurrency.TabIndex = 70;
             this.lblCurrency.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblTestRestart
-            // 
-            this.lblTestRestart.Location = new System.Drawing.Point(46, 523);
-            this.lblTestRestart.Name = "lblTestRestart";
-            this.lblTestRestart.Size = new System.Drawing.Size(100, 37);
-            this.lblTestRestart.TabIndex = 71;
-            this.lblTestRestart.Text = "Restart Test";
-            this.lblTestRestart.Click += new System.EventHandler(this.lblTestRestart_Click);
             // 
             // tmPicture
             // 
@@ -1098,7 +1089,6 @@
             this.Controls.Add(this.lwn2);
             this.Controls.Add(this.lwn1);
             this.Controls.Add(this.lblCancelBet);
-            this.Controls.Add(this.lblTestRestart);
             this.Controls.Add(this.lblCurrency);
             this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.lwn0);
@@ -1256,7 +1246,6 @@
         private System.Windows.Forms.Label lwn0;
         private System.Windows.Forms.Label lblHelp;
         private System.Windows.Forms.Label lblCurrency;
-        private System.Windows.Forms.Label lblTestRestart;
         private System.Windows.Forms.Timer tmPicture;
         private System.Windows.Forms.Label lblCancelBet;
         private System.Windows.Forms.Label lwn1;

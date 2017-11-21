@@ -133,6 +133,16 @@ namespace RULETKA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap piqndeta {
+            get {
+                object obj = ResourceManager.GetObject("piqndeta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap redLine {
             get {
                 object obj = ResourceManager.GetObject("redLine", resourceCulture);

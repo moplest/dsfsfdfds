@@ -18,3 +18,4 @@ C:\Users\bezpa\OneDrive\Documents\GitHub\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RUL
 C:\Users\bezpa\OneDrive\Documents\GitHub\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.Ruletka.resources
 C:\Users\bezpa\OneDrive\Documents\GitHub\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.Properties.Resources.resources
 C:\Users\bezpa\OneDrive\Documents\GitHub\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.csproj.GenerateResource.Cache
+C:\Users\bezpa\OneDrive\Documents\GitHub\dsfsfdfds\RULETKA\RULETKA\obj\Debug\RULETKA.HelpForm.resources

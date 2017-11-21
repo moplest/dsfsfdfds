@@ -252,11 +252,11 @@ namespace RULETKA
             //timer is set to 60 seconds at start
             if (timeLeft == 60)
             {
-                lblText.Text = "Please Place Your Bets !!";
+                lblText.Text = "Please Place Your Bets ";
             }
             else if (timeLeft == 20)
             {
-                lblText.Text = "Last Bets !";
+                lblText.Text = "Last Bets ";
             }
             else if (timeLeft == -1)
             {
@@ -759,6 +759,12 @@ namespace RULETKA
             chipForNumber[34].Click += n34_Click;
             chipForNumber[35].Click += n35_Click;
             chipForNumber[36].Click += n36_Click;
+        }
+
+        private void lblHelp_Click(object sender, EventArgs e)
+        {
+            var helpForm = new HelpForm();
+            helpForm.Show();
         }
     }
 }

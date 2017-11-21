@@ -23,8 +23,6 @@ namespace RULETKA
             tbPassword.Text = "";
             tbPassword.PasswordChar = '*';
             tbPassword.MaxLength = 10;
-            ///za testa
-            tbPassword.Text = "1234";
             lblError.Text = "";
         }
         private void LoginButton_Click(object sender, EventArgs e)
@@ -57,7 +55,7 @@ namespace RULETKA
                             }
                             else
                             {
-                                lblError.Text += "more than the money you have in your card!";
+                                lblError.Text += "more than the money you have \nin your card!";
                             }
                         }
                     }
