@@ -27,7 +27,6 @@ namespace RULETKA
         }
         private void LoginButton_Click(object sender, EventArgs e)
         {
-
             int cash = int.Parse(tbInputMoney.Text);
             p = pc.getPlayerByName(tbUser.Text);
             currency = cbCurrancy.Text;

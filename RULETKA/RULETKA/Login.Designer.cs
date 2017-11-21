@@ -46,7 +46,7 @@
             this.LoginButton.Location = new System.Drawing.Point(86, 553);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(129, 30);
-            this.LoginButton.TabIndex = 0;
+            this.LoginButton.TabIndex = 5;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
@@ -80,7 +80,7 @@
             this.tbUser.Location = new System.Drawing.Point(164, 434);
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(164, 20);
-            this.tbUser.TabIndex = 3;
+            this.tbUser.TabIndex = 1;
             // 
             // tbInputMoney
             // 
@@ -142,7 +142,7 @@
             this.tbPassword.Location = new System.Drawing.Point(163, 463);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(164, 20);
-            this.tbPassword.TabIndex = 10;
+            this.tbPassword.TabIndex = 2;
             // 
             // cbCurrancy
             // 
@@ -158,7 +158,7 @@
             this.cbCurrancy.Location = new System.Drawing.Point(163, 492);
             this.cbCurrancy.Name = "cbCurrancy";
             this.cbCurrancy.Size = new System.Drawing.Size(163, 21);
-            this.cbCurrancy.TabIndex = 11;
+            this.cbCurrancy.TabIndex = 3;
             // 
             // Login
             // 

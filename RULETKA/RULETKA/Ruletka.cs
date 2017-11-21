@@ -334,6 +334,7 @@ namespace RULETKA
             timeLeft = 60;
             pbRedLine.Width = 0;
             tmPicture.Start();
+            tmRandomNumber.Interval = 50;
             removeAllChips(false);
         }
         public Label InitializeChipClone(int number)
@@ -494,7 +495,10 @@ namespace RULETKA
         }
         private void lblCancelBet_Click(object sender, EventArgs e)
         {
-            removeAllChips(true);
+            if (timeLeft>=0)
+            {
+                removeAllChips(true);
+            }
         }
         private void n0_Click(object sender, EventArgs e)
         {

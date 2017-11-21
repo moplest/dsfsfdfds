@@ -120,6 +120,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbRedLine)).BeginInit();
             this.SuspendLayout();
             // 
@@ -758,7 +760,8 @@
             this.lblPlayerName.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerName.Font = new System.Drawing.Font("Baskerville Old Face", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPlayerName.Location = new System.Drawing.Point(100, 160);
+            this.lblPlayerName.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblPlayerName.Location = new System.Drawing.Point(16, 159);
             this.lblPlayerName.Name = "lblPlayerName";
             this.lblPlayerName.Size = new System.Drawing.Size(192, 43);
             this.lblPlayerName.TabIndex = 61;
@@ -819,7 +822,7 @@
             this.lblLastWin.ForeColor = System.Drawing.SystemColors.Control;
             this.lblLastWin.Location = new System.Drawing.Point(1157, 52);
             this.lblLastWin.Name = "lblLastWin";
-            this.lblLastWin.Size = new System.Drawing.Size(69, 23);
+            this.lblLastWin.Size = new System.Drawing.Size(61, 23);
             this.lblLastWin.TabIndex = 66;
             this.lblLastWin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -1065,13 +1068,39 @@
             this.label5.Text = "LastWin";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(244, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(152, 48);
+            this.label6.TabIndex = 89;
+            this.label6.Text = "MaxBet: 200";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Baskerville Old Face", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(31, 495);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 14);
+            this.label7.TabIndex = 90;
+            this.label7.Text = "RULETKATA";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Ruletka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA6;
+            this.BackgroundImage = global::RULETKA.Properties.Resources.RULETKATA8;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -1265,5 +1294,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

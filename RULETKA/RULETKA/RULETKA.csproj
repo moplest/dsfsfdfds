@@ -153,6 +153,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\piqndeta.jpg" />
+    <None Include="Resources\RULETKATA8.png" />
+    <None Include="Resources\RULETKATA7.png" />
     <None Include="Resources\piqndeta1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

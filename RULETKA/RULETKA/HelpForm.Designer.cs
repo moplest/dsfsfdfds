@@ -82,6 +82,9 @@
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblLink);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(439, 497);
+            this.MinimumSize = new System.Drawing.Size(439, 497);
             this.Name = "HelpForm";
             this.Text = "Help";
             this.Load += new System.EventHandler(this.HelpForm_Load);

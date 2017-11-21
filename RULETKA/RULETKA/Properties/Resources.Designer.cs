@@ -223,6 +223,26 @@ namespace RULETKA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RULETKATA7 {
+            get {
+                object obj = ResourceManager.GetObject("RULETKATA7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RULETKATA8 {
+            get {
+                object obj = ResourceManager.GetObject("RULETKATA8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap THE_CHIP {
             get {
                 object obj = ResourceManager.GetObject("THE CHIP", resourceCulture);

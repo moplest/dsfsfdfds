@@ -1,5 +1,2 @@
-1. Font na labelite
-3. Preorazmerqvane na labelite
-4. Help button
-5. redakcii po login formata; validaciq na danni
+1. null money input
 * Serii - golqma,malka,orf,nulev
