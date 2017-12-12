@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace RULETKA
 {
@@ -23,8 +24,11 @@ namespace RULETKA
         private Label[] lastNumbers = new Label[12];
         private int[] redNumbers = { 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 };
         private int[] blackNumbers = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
-        private int timeLeft = 60;
+        private int timeLeft = 30;
         private Random random = new Random();
+        private SoundPlayer startBetSound = new SoundPlayer(Properties.Resources._1);
+        private SoundPlayer warningBetSound = new SoundPlayer(Properties.Resources._2);
+        private SoundPlayer endBetSound = new SoundPlayer(Properties.Resources._3);
         public Ruletka()
         {
             InitializeComponent();
@@ -250,19 +254,21 @@ namespace RULETKA
         private void tm_Tick(object sender, EventArgs e)
         {
             //timer is set to 60 seconds at start
-            if (timeLeft == 60)
+            if (timeLeft == 30)
             {
                 lblText.Text = "Please Place Your Bets ";
+                startBetSound.Play();
             }
-            else if (timeLeft == 20)
+            if (timeLeft == 10)
             {
                 lblText.Text = "Last Bets ";
+                warningBetSound.Play();
             }
-            else if (timeLeft == -1)
+            if (timeLeft == 0)
             {
                 lblText.Text = "No More Bets";
-            }
-                        
+                endBetSound.Play();
+            }                        
             if (timeLeft ==5)
             {
                 tmRandomNumber.Start();
@@ -306,6 +312,14 @@ namespace RULETKA
                 tmRandomNumber.Interval += 100;
             }
         }
+        private void tmPicture_Tick(object sender, EventArgs e)
+        {
+            if (pbRedLine.Width == 329)
+            {
+                tmPicture.Stop();
+            }
+            pbRedLine.Width++;
+        }
         private void newWiningNumber(string number)
         {
             for (int i = lastNumbers.Length - 1; i > 0; i--)
@@ -331,7 +345,7 @@ namespace RULETKA
             lblLastBet.Text = lblBet.Text;
             lblRollNumber.Text = "";
             lblRollNumber.BackColor = Color.Black;
-            timeLeft = 60;
+            timeLeft = 30;
             pbRedLine.Width = 0;
             tmPicture.Start();
             tmRandomNumber.Interval = 50;
@@ -458,14 +472,6 @@ namespace RULETKA
                     }
                     break;
             }
-        }
-        private void tmPicture_Tick(object sender, EventArgs e)
-        {
-            if (pbRedLine.Width == 329)
-            {
-                tmPicture.Stop();
-            }
-            pbRedLine.Width++;
         }
         private void goToLoginForm()
         {

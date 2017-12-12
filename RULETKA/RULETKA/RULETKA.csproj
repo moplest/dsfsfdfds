@@ -152,6 +152,9 @@
     <None Include="Resources\RULETKATA6.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1.wav" />
+    <None Include="Resources\2.wav" />
+    <None Include="Resources\3.wav" />
     <Content Include="Resources\piqndeta.jpg" />
     <None Include="Resources\RULETKATA8.png" />
     <None Include="Resources\RULETKATA7.png" />

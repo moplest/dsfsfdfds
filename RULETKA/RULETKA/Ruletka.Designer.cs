@@ -870,7 +870,7 @@
             // 
             // tmPicture
             // 
-            this.tmPicture.Interval = 184;
+            this.tmPicture.Interval = 92;
             this.tmPicture.Tick += new System.EventHandler(this.tmPicture_Tick);
             // 
             // lblCancelBet
