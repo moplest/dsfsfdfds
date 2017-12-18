@@ -27,7 +27,6 @@ namespace RULETKA
         }
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            int cash = int.Parse(tbInputMoney.Text);
             p = pc.getPlayerByName(tbUser.Text);
             currency = cbCurrancy.Text;
             if (p != null)
@@ -36,8 +35,19 @@ namespace RULETKA
                 {
                     if (currency != "")
                     {
+                        int cash;
+                        if (tbInputMoney.Text != "")
+                        {
+                            cash = int.Parse(tbInputMoney.Text);
+                        }
+                        else
+                        {
+                            lblError.Text = "An error has occured! Please select valid \ncash4play amount!";
+                            return;
+                        }
                         if (cash >= 100 && cash <= p.cardMoney)
                         {
+                            
                             p.cash4play = cash;
                             p.cardMoney -= cash;
                             lblError.Text = "";
